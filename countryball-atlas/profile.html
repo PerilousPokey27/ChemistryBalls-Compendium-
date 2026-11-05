@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Passport — Countryball Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="ledger-nav">
+    <a href="index.html" class="brand">Countryball Atlas <small>Est. Vol. I</small></a>
+    <div class="links">
+      <a href="index.html">← Back to atlas</a>
+      <button id="logout-btn">Log out</button>
+    </div>
+  </nav>
+
+  <main class="passport-wrap">
+    <div class="passport">
+      <div class="passport-header">
+        <div class="ball-wrap" id="passport-ball"></div>
+        <div>
+          <h1 id="passport-name"></h1>
+          <div class="since" id="passport-since"></div>
+        </div>
+      </div>
+      <p class="passport-bio" id="passport-bio"></p>
+
+      <div class="stamps-section">
+        <h3>Stamps collected</h3>
+        <div class="stamps-list" id="stamps-list"></div>
+      </div>
+    </div>
+
+    <div class="form-card" style="margin-top: 24px;">
+      <h2>Edit passport</h2>
+      <form id="edit-profile-form">
+        <div class="field">
+          <label for="edit-displayname">Display name</label>
+          <input type="text" id="edit-displayname" maxlength="30" required />
+        </div>
+        <div class="field">
+          <label for="edit-bio">Bio</label>
+          <textarea id="edit-bio" maxlength="200" placeholder="A short line about you"></textarea>
+        </div>
+        <div class="field">
+          <label>Avatar colors</label>
+          <div class="color-row">
+            <input type="color" id="edit-color-1" />
+            <input type="color" id="edit-color-2" />
+          </div>
+        </div>
+        <button type="submit" class="btn">Save changes</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>Countryball Atlas — accounts are stored locally in your browser. See README.md.</footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ball.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

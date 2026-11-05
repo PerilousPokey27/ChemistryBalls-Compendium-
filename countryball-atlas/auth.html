@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — Countryball Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <nav class="ledger-nav">
+    <a href="index.html" class="brand">Countryball Atlas <small>Est. Vol. I</small></a>
+    <div class="links">
+      <a href="index.html">← Back to atlas</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="form-card">
+      <div class="google-btn-row" id="google-btn-container"></div>
+      <p class="google-note" id="google-note"></p>
+      <div class="divider">or use a username</div>
+
+      <div class="tabs">
+        <button id="tab-login" class="active" type="button">Log in</button>
+        <button id="tab-register" type="button">Sign up</button>
+      </div>
+
+      <form id="login-form">
+        <h2>Welcome back</h2>
+        <div class="field">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" required autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required autocomplete="current-password" />
+        </div>
+        <div class="error-msg" id="login-error"></div>
+        <button type="submit" class="btn">Log in</button>
+      </form>
+
+      <form id="register-form" class="hidden">
+        <h2>Create your passport</h2>
+        <div class="field">
+          <label for="register-username">Username</label>
+          <input type="text" id="register-username" required autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="register-displayname">Display name</label>
+          <input type="text" id="register-displayname" placeholder="Shown on your passport" />
+        </div>
+        <div class="field">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" required autocomplete="new-password" />
+        </div>
+        <div class="field">
+          <label for="register-confirm">Confirm password</label>
+          <input type="password" id="register-confirm" required autocomplete="new-password" />
+        </div>
+        <div class="error-msg" id="register-error"></div>
+        <button type="submit" class="btn">Create account</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>Countryball Atlas — accounts are stored locally in your browser. See README.md.</footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

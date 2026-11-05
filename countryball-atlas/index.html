@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countryball Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="ledger-nav">
+    <a href="index.html" class="brand">Countryball Atlas <small>Est. Vol. I</small></a>
+    <div class="links" id="nav-links">
+      <!-- populated by app.js depending on login state -->
+    </div>
+  </nav>
+
+  <header class="cover">
+    <div class="eyebrow">A living catalogue</div>
+    <h1>Every ball, catalogued.</h1>
+    <p>Search the atlas, browse by category, or sign in to add your own entries and start collecting stamps in your passport.</p>
+  </header>
+
+  <div class="catalog-bar">
+    <span class="drawer-label">Catalog</span>
+    <input type="text" id="search-input" placeholder="Search entries by name…" />
+    <select id="category-filter">
+      <option value="all">All categories</option>
+    </select>
+  </div>
+
+  <main class="atlas-wrap">
+    <div class="atlas-grid" id="atlas-grid">
+      <!-- populated by app.js -->
+    </div>
+    <div class="pager" id="pager"></div>
+  </main>
+
+  <footer>Countryball Atlas — a fan-made project. Not affiliated with any official cartography guild.</footer>
+
+  <!-- Add entry modal -->
+  <div class="modal-backdrop" id="add-entry-modal">
+    <div class="modal-card">
+      <button class="close-btn" id="add-entry-close" aria-label="Close">✕</button>
+      <h2>Add to the atlas</h2>
+      <form id="add-entry-form">
+        <div class="field">
+          <label for="entry-name">Name</label>
+          <input type="text" id="entry-name" required maxlength="40" />
+        </div>
+        <div class="field">
+          <label for="entry-category">Category</label>
+          <input type="text" id="entry-category" placeholder="Nation, Organization, Custom…" maxlength="30" />
+        </div>
+        <div class="field">
+          <label for="entry-image">Image (PNG/JPG, any topic)</label>
+          <input type="file" id="entry-image" accept="image/png,image/jpeg,image/webp" />
+          <div class="field-hint">Optional — leave blank and a unique placeholder is generated from the name.</div>
+        </div>
+        <div class="field">
+          <label for="entry-description">Description</label>
+          <textarea id="entry-description" required maxlength="400"></textarea>
+        </div>
+        <div class="error-msg" id="add-entry-error"></div>
+        <button type="submit" class="btn">Add entry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/placeholder.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
