@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Countryball Atlas — design tokens
+   Chemistryballs Compendium — design tokens
    Theme: vibrant "collectible dex" — deep indigo/navy base (anchored to the
    real Polandball Go brand color #1a1a2e) with a violet -> pink -> cyan
    accent gradient, glassmorphic cards, and a slow ambient background drift.
@@ -266,7 +266,7 @@ a { color: inherit; }
 
 .catalog-bar input::placeholder { color: var(--text-dim); }
 
-/* ---------- Atlas grid ---------- */
+/* ---------- Compendium grid ---------- */
 
 .atlas-wrap {
   max-width: 1080px;

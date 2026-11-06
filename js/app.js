@@ -1,5 +1,5 @@
 /* ==========================================================================
-   app.js — powers index.html (the atlas grid)
+   app.js — powers index.html (the Compendium grid)
    ========================================================================== */
 
 let currentEntries = [];

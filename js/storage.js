@@ -98,10 +98,13 @@ const Storage = (() => {
 
     if (raw && storedVersion !== currentVersion) {
       // The built-in dataset (data.js) changed since this browser last
-      // loaded the site. Refresh the built-in ("atlas") entries but keep
-      // anything this visitor personally added through "Add Entry".
+      // loaded the site. Refresh the built-in entries but keep anything
+      // this visitor personally added through "Add Entry". Built-ins are
+      // labelled "Compendium" now; "atlas" is the older label that browsers
+      // with a previously saved copy still carry, so both count as built-in.
       const existing = JSON.parse(raw);
-      const userAdded = existing.filter((e) => e.addedBy !== "atlas");
+      const BUILT_IN_AUTHORS = ["Compendium", "atlas"];
+      const userAdded = existing.filter((e) => !BUILT_IN_AUTHORS.includes(e.addedBy));
       const merged = [...seeded, ...userAdded];
       saveEntries(merged);
       if (currentVersion) localStorage.setItem(SEED_VERSION_KEY, currentVersion);

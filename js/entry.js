@@ -1,5 +1,5 @@
 /* ==========================================================================
-   entry.js — powers entry.html (a single atlas entry's own page)
+   entry.js — powers entry.html (a single Compendium entry's own page)
    Layout: image card on one side, stacked detail panels on the other —
    deliberately a different arrangement/style from any particular app,
    built from this site's own data fields (no stats/rarity data exists
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     root.innerHTML = `
       <div class="detail-panel not-found-panel">
         <p class="not-found">This entry doesn't exist — it may have been removed, or the link is off.</p>
-        <a class="btn" href="index.html" style="display:inline-block;width:auto;">Back to the atlas</a>
+        <a class="btn" href="index.html" style="display:inline-block;width:auto;">Back to the Compendium</a>
       </div>
     `;
     return;
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-/* ---------- Nav (same behavior as the atlas page) ---------- */
+/* ---------- Nav (same behavior as the Compendium page) ---------- */
 
 function renderNav() {
   const nav = document.getElementById("nav-links");

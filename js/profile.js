@@ -39,7 +39,7 @@ function renderStamps() {
   const list = document.getElementById("stamps-list");
 
   if (entries.length === 0) {
-    list.innerHTML = `<div class="no-stamps">No stamps yet — add an entry to the atlas to earn your first one.</div>`;
+    list.innerHTML = `<div class="no-stamps">No stamps yet — add an entry to the Compendium to earn your first one.</div>`;
     return;
   }
 

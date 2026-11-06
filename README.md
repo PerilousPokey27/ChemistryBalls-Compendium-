@@ -1,6 +1,6 @@
-# Countryball Atlas
+# Chemistryballs Compendium
 
-A static (no server needed) HTML/CSS/JS site: a searchable atlas of
+A static (no server needed) HTML/CSS/JS site: a searchable Compendium of
 "countryball" entries plus user accounts with a customizable profile
 ("passport"), styled like an old cartography ledger.
 
@@ -8,18 +8,18 @@ A static (no server needed) HTML/CSS/JS site: a searchable atlas of
 
 ```
 countryball-atlas/
-├── index.html          Atlas home: search, filter, entry grid, add-entry form
-├── entry.html            A single atlas entry's own detail page
+├── index.html          Compendium home: search, filter, entry grid, add-entry form
+├── entry.html            A single Compendium entry's own detail page
 ├── auth.html             Log in / sign up (username, or Google)
 ├── profile.html          "Passport" — edit your display name, bio, avatar colors
 ├── images/
 │   ├── default-ball.png    Unused fallback, kept for reference
-│   └── entries/             405 spawn-art PNGs, one per atlas entry
+│   └── entries/             one spawn-art PNG per Compendium entry
 ├── css/
 │   └── style.css         All styling (design tokens at the top)
 ├── js/
 │   ├── storage.js         All data persistence (localStorage) — users, sessions, entries
-│   ├── data.js             Starter atlas entries (each points at a PNG in images/entries/)
+│   ├── data.js             Starter Compendium entries (each points at a PNG in images/entries/)
 │   ├── ball.js             Generates the profile "passport" avatar as SVG from stripe colors
 │   ├── app.js              index.html logic
 │   ├── entry.js            entry.html logic
@@ -30,7 +30,7 @@ countryball-atlas/
 
 ## Using your own images
 
-Every atlas entry is a real image now, not a generated graphic — so you
+Every Compendium entry is a real image now, not a generated graphic — so you
 can drop in art for any topic, not just countries.
 
 - **Starter entries**: replace the files in `images/entries/` with your
@@ -56,15 +56,15 @@ turned on in their OS settings.
 
 ## Starter data
 
-The atlas ships with 639 entries: 427 come from the community rarity
-list (matched to artwork by name — 379 had matching art, 48 are
-placeholder-only for now), plus 212 more illustrated entries that had
-art but weren't on the rarity list (shown unranked, sorted to the end).
-Category defaults to "Compound" for all of them. 387 have a real
-written description (some researched, some from general knowledge);
-the remaining 252 (mostly the unranked leftovers) still read
-"Description not written yet" and are easy to bulk-edit directly in
-`js/data.js` since it's a plain array.
+The Compendium ships with 632 entries: 428 come from the community
+rarity list (392 matched to artwork by name, 36 are placeholder-only
+for now), plus 204 more illustrated entries that had art but weren't
+on the rarity list (shown unranked, sorted to the end). Category
+defaults to "Compound" for all of them. 389 have a real written
+description (some researched, some from general knowledge); the
+remaining 243 (mostly the unranked leftovers) still read "Description
+not written yet" and are easy to bulk-edit directly in `js/data.js`
+since it's a plain array.
 
 ## Image display
 
@@ -73,11 +73,11 @@ without cropping (`object-fit: contain` in a rounded square, not a
 circle, and bigger than before) — some source art wasn't perfectly
 centered/square and was getting cut off under the old circular crop.
 
-## Performance with a large atlas
+## Performance with a large Compendium
 
 With 600+ entries, the grid paginates automatically (60 per page).
 There's a "go to page" jump box next to the page buttons, and clicking
-into an entry then hitting "Back to the atlas" returns you to the
+into an entry then hitting "Back to the Compendium" returns you to the
 exact page you came from (carried via a `?page=` URL parameter) rather
 than resetting to page 1. Thumbnails also lazy-load.
 `PAGE_SIZE` in `js/app.js` controls how many entries show per page.
@@ -127,7 +127,7 @@ then visit `http://localhost:8000`.
 ## Important: how data is stored right now
 
 This version has **no backend** — everything (accounts, passwords,
-atlas entries people add) is saved in `localStorage`, which is local to
+Compendium entries people add) is saved in `localStorage`, which is local to
 one browser on one device. That means:
 
 - If you and a friend both open the site, you won't see each other's
@@ -135,7 +135,7 @@ one browser on one device. That means:
 - Clearing browser data / using a different browser or device starts fresh.
 - This is genuinely free to host (it's just static files — GitHub Pages,
   Netlify, or Vercel will all serve it at no cost), but it isn't yet a
-  shared, multi-person atlas.
+  shared, multi-person Compendium.
 
 If/when you want entries and accounts to be visible to *everyone* who
 visits the site, that's the point where you'd add a small real backend

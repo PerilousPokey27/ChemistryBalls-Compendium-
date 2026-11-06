@@ -26,7 +26,7 @@ function hashString(str) {
 }
 
 function generatePlaceholderSVG(name) {
-  const h = hashString(name || "atlas entry");
+  const h = hashString(name || "compendium entry");
   const colors = PLACEHOLDER_PALETTES[h % PLACEHOLDER_PALETTES.length];
   const pattern = ["stripes", "diagonal", "split", "dots"][Math.floor(h / 7) % 4];
   const eyeStyle = ["round", "sleepy", "wide", "wink"][Math.floor(h / 29) % 4];

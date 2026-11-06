@@ -1,18 +1,18 @@
 /* ==========================================================================
    data.js
-   Starter entries: 639 total, built from the Ballsdex bot's spawn artwork
-   plus the community rarity list (matched by name). Each points at a PNG
-   in images/entries/. `rarity` is null for art that didn't match a name
-   on the rarity list (still shown, just unranked, sorted to the end).
-   Only ~170 have real descriptions — the rest read "Description not
-   written yet" and are safe to bulk-edit right here.
+   Built-in Compendium entries: 632 total, built from the Ballsdex bot's
+   spawn artwork plus the community rarity list (matched by name). Each
+   points at a PNG in images/entries/. `rarity` is null for art that didn't
+   match a name on the rarity list (still shown, just unranked, sorted to
+   the end). 389 have a real description — the rest read "Description
+   not written yet" and are safe to bulk-edit right here.
    ========================================================================== */
 
 // Bump this string any time defaultEntries below changes (new art, fixed
 // images, new descriptions, etc). storage.js compares it to what's saved
 // in each visitor's browser and refreshes automatically when it differs —
 // without erasing anything a visitor added themselves via "Add Entry".
-const SEED_VERSION = "2026-08-26-v3";
+const SEED_VERSION = "2026-11-07-v4";
 
 const defaultEntries = [
   {
@@ -22,8 +22,18 @@ const defaultEntries = [
     image: "images/entries/liquid-nitrogen-3.png",
     rarity: 1,
     description: "Nitrogen gas cooled below -196C into a colorless, extremely cold liquid, widely used for rapid freezing and cryogenics.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
+  },
+  {
+    id: "rarity-diamond",
+    name: "Diamond",
+    category: "Compound",
+    image: "images/entries/diamond.png",
+    rarity: 1,
+    description: "A crystal form of pure carbon whose atoms are locked in a rigid three-dimensional lattice, making it the hardest naturally occurring material and a classic gemstone.",
+    addedBy: "Compendium",
+    dateAdded: "2026-11-07T00:00:00.000Z",
   },
   {
     id: "bare-uranium",
@@ -32,7 +42,7 @@ const defaultEntries = [
     image: "images/entries/uranium.png",
     rarity: 2,
     description: "A dense, silvery radioactive metal best known as nuclear reactor and weapons fuel.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -42,7 +52,7 @@ const defaultEntries = [
     image: "images/entries/plutonium.png",
     rarity: 3,
     description: "A man-made radioactive metal, key to nuclear weapons and reactor fuel, notorious for its long-lived toxicity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -52,7 +62,7 @@ const defaultEntries = [
     image: "images/entries/bronze.png",
     rarity: 3,
     description: "An alloy of copper and tin, prized since antiquity for tools, weapons, and statues.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -62,7 +72,7 @@ const defaultEntries = [
     image: "images/entries/kyawthuite.png",
     rarity: 4,
     description: "The rarest mineral known on Earth — only a single 1.61-carat orange gem has ever been found, discovered in Myanmar in 2010.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-24T00:00:00.000Z",
   },
   {
@@ -72,7 +82,7 @@ const defaultEntries = [
     image: "images/entries/painite.png",
     rarity: 5,
     description: "One of the rarest gemstones on Earth, a reddish-brown borate mineral first identified in Myanmar.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -82,7 +92,7 @@ const defaultEntries = [
     image: "images/entries/silver-2.png",
     rarity: 5,
     description: "A lustrous white metal valued for jewelry, currency, and its excellent electrical conductivity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -92,7 +102,7 @@ const defaultEntries = [
     image: "images/entries/antimatter.png",
     rarity: 10,
     description: "Matter made of particles with opposite charge to ordinary matter; it annihilates on contact with normal matter, releasing enormous energy.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -102,7 +112,7 @@ const defaultEntries = [
     image: "images/entries/dark-matter.png",
     rarity: 11,
     description: "An invisible, undetected form of matter inferred from its gravitational effects on galaxies.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -112,7 +122,7 @@ const defaultEntries = [
     image: "images/entries/aquamarine.png",
     rarity: 11,
     description: "A pale blue-green variety of the mineral beryl, popular as a gemstone.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -122,7 +132,7 @@ const defaultEntries = [
     image: "images/entries/moissanite.png",
     rarity: 12,
     description: "A rare naturally-occurring silicon carbide mineral, also lab-grown as a diamond alternative.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-12T00:00:00.000Z",
   },
   {
@@ -132,7 +142,7 @@ const defaultEntries = [
     image: "images/entries/cadaverine-3.png",
     rarity: 12,
     description: "A foul-smelling compound produced by the breakdown of amino acids in decaying tissue.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -142,7 +152,7 @@ const defaultEntries = [
     image: "images/entries/emerald.png",
     rarity: 12,
     description: "A vivid green gem variety of beryl, colored by trace chromium or vanadium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-16T00:00:00.000Z",
   },
   {
@@ -152,7 +162,7 @@ const defaultEntries = [
     image: "images/entries/keyite.png",
     rarity: 15,
     description: "An extremely rare copper-zinc-cadmium arsenate mineral known from only a handful of specimens.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -162,7 +172,7 @@ const defaultEntries = [
     image: "images/entries/fentanyl-2.png",
     rarity: 15,
     description: "A synthetic opioid many times more potent than morphine, used medically but also a major driver of overdose deaths.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -172,7 +182,7 @@ const defaultEntries = [
     image: "images/entries/formaldehyde.png",
     rarity: 20,
     description: "A pungent, reactive gas used in preservatives, resins, and embalming fluid.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -182,7 +192,7 @@ const defaultEntries = [
     image: "images/entries/electric-neon.png",
     rarity: 21,
     description: "Neon gas excited to glow, the basis of classic neon signage.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -192,7 +202,7 @@ const defaultEntries = [
     image: "images/entries/uranium-235.png",
     rarity: 22,
     description: "The fissile uranium isotope used to sustain nuclear chain reactions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -202,17 +212,17 @@ const defaultEntries = [
     image: "images/entries/polonium.png",
     rarity: 22,
     description: "An intensely radioactive, rare metal, notorious for its use as a poison.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
     id: "rarity-methamphetamine",
     name: "Methamphetamine",
     category: "Compound",
-    image: null,
+    image: "images/entries/methamphetamine.png",
     rarity: 24,
     description: "A powerful synthetic stimulant with high potential for abuse and addiction.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -222,7 +232,7 @@ const defaultEntries = [
     image: "images/entries/strontium-aluminate.png",
     rarity: 24,
     description: "A phosphorescent compound that stores and slowly releases light, used in glow-in-the-dark products.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-22T00:00:00.000Z",
   },
   {
@@ -232,7 +242,7 @@ const defaultEntries = [
     image: null,
     rarity: 25,
     description: "A nickel-iron alloy engineered to barely expand or contract with temperature change.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -242,17 +252,17 @@ const defaultEntries = [
     image: "images/entries/white-gold.png",
     rarity: 25,
     description: "A gold alloy mixed with white metals like palladium or nickel for a silvery finish.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-12T00:00:00.000Z",
   },
   {
     id: "rarity-californium",
     name: "Californium",
     category: "Compound",
-    image: null,
+    image: "images/entries/californium.png",
     rarity: 26,
     description: "A synthetic radioactive element used as a neutron source in research and industry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -262,7 +272,7 @@ const defaultEntries = [
     image: null,
     rarity: 27,
     description: "Argon gas ionized to glow violet-blue, used in some specialty lighting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -272,7 +282,7 @@ const defaultEntries = [
     image: "images/entries/latherin.png",
     rarity: 28,
     description: "A foaming protein found in horse sweat and saliva that helps disperse moisture for cooling.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-23T00:00:00.000Z",
   },
   {
@@ -282,7 +292,7 @@ const defaultEntries = [
     image: "images/entries/fluoroantimonic-acid.png",
     rarity: 29,
     description: "The strongest known superacid, capable of dissolving glass and most organic material.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-08T00:00:00.000Z",
   },
   {
@@ -292,7 +302,7 @@ const defaultEntries = [
     image: "images/entries/polonium-monoxide.png",
     rarity: 30,
     description: "A radioactive polonium compound, extremely toxic and rarely encountered outside labs.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -302,7 +312,7 @@ const defaultEntries = [
     image: "images/entries/solid-oxygen.png",
     rarity: 30,
     description: "Oxygen frozen below -218C into a pale blue crystalline solid.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -312,7 +322,7 @@ const defaultEntries = [
     image: "images/entries/rose-quartz.png",
     rarity: 30,
     description: "A pink variety of quartz colored by trace titanium or manganese.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -322,7 +332,7 @@ const defaultEntries = [
     image: null,
     rarity: 30,
     description: "A highly toxic ion that blocks cells from using oxygen; found in salts like potassium cyanide.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -332,7 +342,7 @@ const defaultEntries = [
     image: null,
     rarity: 30,
     description: "An extremely potent synthetic opioid originally developed as a large-animal tranquilizer.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -342,7 +352,7 @@ const defaultEntries = [
     image: "images/entries/europium.png",
     rarity: 30,
     description: "A rare-earth metal prized for producing red and blue phosphors in displays.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -352,7 +362,7 @@ const defaultEntries = [
     image: "images/entries/mexican-opal.png",
     rarity: 30,
     description: "A fire-colored opal variety from Mexico, often orange to red rather than the typical white base.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
@@ -362,7 +372,7 @@ const defaultEntries = [
     image: "images/entries/phosgene.png",
     rarity: 32,
     description: "A colorless, highly toxic gas historically used as a chemical weapon and industrially in plastics production.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-07T00:00:00.000Z",
   },
   {
@@ -372,7 +382,7 @@ const defaultEntries = [
     image: "images/entries/maxixe.png",
     rarity: 35,
     description: "A deep blue beryl variety whose color is unstable and fades in sunlight.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -381,8 +391,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/redstone.png",
     rarity: 35,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -392,7 +402,7 @@ const defaultEntries = [
     image: "images/entries/turquoise.png",
     rarity: 37,
     description: "A blue-green copper-aluminum phosphate mineral, prized as a gem for millennia.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -402,7 +412,7 @@ const defaultEntries = [
     image: "images/entries/amethyst.png",
     rarity: 37,
     description: "A purple variety of quartz, colored by iron impurities and irradiation.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -412,7 +422,7 @@ const defaultEntries = [
     image: "images/entries/tellurium.png",
     rarity: 37,
     description: "A brittle silver-white metalloid used in solar panels and alloys.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -422,7 +432,7 @@ const defaultEntries = [
     image: "images/entries/imperial-jade.png",
     rarity: 39,
     description: "The most prized variety of jadeite, valued for its vivid emerald-green color.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-05T00:00:00.000Z",
   },
   {
@@ -432,7 +442,7 @@ const defaultEntries = [
     image: "images/entries/sinhalite.png",
     rarity: 40,
     description: "A rare brown gem mineral, once mistaken for peridot before being identified separately.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -442,7 +452,7 @@ const defaultEntries = [
     image: "images/entries/realgar.png",
     rarity: 40,
     description: "A soft, red-orange arsenic sulfide mineral, historically used as a pigment despite its toxicity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -452,7 +462,7 @@ const defaultEntries = [
     image: "images/entries/glycine.png",
     rarity: 42,
     description: "The simplest amino acid, a basic building block of proteins.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -462,7 +472,7 @@ const defaultEntries = [
     image: "images/entries/neon.png",
     rarity: 43,
     description: "A noble gas best known for glowing reddish-orange in electrified signs.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -472,7 +482,7 @@ const defaultEntries = [
     image: "images/entries/nitric-acid.png",
     rarity: 43,
     description: "A strong, corrosive acid widely used in fertilizer production and explosives manufacturing.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -482,7 +492,7 @@ const defaultEntries = [
     image: "images/entries/smokey-quartz-2.png",
     rarity: 44,
     description: "A brown-to-black quartz variety colored by natural irradiation.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -492,7 +502,7 @@ const defaultEntries = [
     image: "images/entries/brazilianite.png",
     rarity: 45,
     description: "A yellow-green phosphate mineral first discovered in Brazil.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -502,7 +512,7 @@ const defaultEntries = [
     image: "images/entries/liquidhelium.png",
     rarity: 45,
     description: "Helium cooled to near absolute zero, used to cool superconducting magnets in MRI machines.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -512,7 +522,7 @@ const defaultEntries = [
     image: null,
     rarity: 45,
     description: "The formal chemical name for VX, one of the most toxic nerve agents ever synthesized.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -522,7 +532,7 @@ const defaultEntries = [
     image: "images/entries/platinum.png",
     rarity: 45,
     description: "A dense, unreactive precious metal used in jewelry, catalysts, and electronics.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-15T00:00:00.000Z",
   },
   {
@@ -532,7 +542,7 @@ const defaultEntries = [
     image: "images/entries/polytetrafluoroethylene.png",
     rarity: 46,
     description: "A slick, heat-resistant synthetic polymer, better known by the brand name Teflon.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-10T00:00:00.000Z",
   },
   {
@@ -542,7 +552,7 @@ const defaultEntries = [
     image: "images/entries/valeric-acid.png",
     rarity: 47,
     description: "A carboxylic acid with a strong odor, found naturally in the valerian plant.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -552,7 +562,7 @@ const defaultEntries = [
     image: null,
     rarity: 50,
     description: "The black, iron-rich variety of tourmaline and its most common form.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -562,7 +572,7 @@ const defaultEntries = [
     image: "images/entries/capsaicin.png",
     rarity: 50,
     description: "The compound responsible for the burning sensation of chili peppers.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -572,7 +582,7 @@ const defaultEntries = [
     image: "images/entries/radium.png",
     rarity: 50,
     description: "A highly radioactive metal once used in luminous paint before its dangers were understood.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-07-19T00:00:00.000Z",
   },
   {
@@ -582,7 +592,7 @@ const defaultEntries = [
     image: "images/entries/ethanol.png",
     rarity: 52,
     description: "The alcohol found in beer, wine, and spirits, also used as a fuel and solvent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -592,7 +602,7 @@ const defaultEntries = [
     image: "images/entries/titanium.png",
     rarity: 54,
     description: "A strong, lightweight, corrosion-resistant metal used in aerospace and medical implants.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -602,7 +612,7 @@ const defaultEntries = [
     image: null,
     rarity: 55,
     description: "A rare opal variety with a dark body tone that makes its color play especially vivid.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -612,7 +622,7 @@ const defaultEntries = [
     image: "images/entries/arsenic.png",
     rarity: 55,
     description: "A toxic metalloid historically infamous as a poison, also used in some semiconductors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -621,8 +631,8 @@ const defaultEntries = [
     category: "Compound",
     image: null,
     rarity: 55,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -632,7 +642,7 @@ const defaultEntries = [
     image: null,
     rarity: 55,
     description: "The venom of the box jellyfish, among the most potent venoms in the animal kingdom.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -642,7 +652,7 @@ const defaultEntries = [
     image: null,
     rarity: 56,
     description: "A pale yellow explosive compound, commonly known by its abbreviation TNT.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -652,7 +662,7 @@ const defaultEntries = [
     image: null,
     rarity: 56,
     description: "A blue asbestos mineral, the most hazardous asbestos form linked to serious lung disease.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -662,7 +672,7 @@ const defaultEntries = [
     image: "images/entries/labradorite.png",
     rarity: 56,
     description: "A feldspar mineral famous for its iridescent flash of color called labradorescence.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-14T00:00:00.000Z",
   },
   {
@@ -672,7 +682,7 @@ const defaultEntries = [
     image: "images/entries/topaz.png",
     rarity: 56,
     description: "A hard silicate gemstone found naturally in many colors, most famously golden and blue.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-16T00:00:00.000Z",
   },
   {
@@ -682,7 +692,7 @@ const defaultEntries = [
     image: "images/entries/calcite.png",
     rarity: 56,
     description: "A common carbonate mineral, the primary component of limestone and marble.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-31T00:00:00.000Z",
   },
   {
@@ -692,7 +702,7 @@ const defaultEntries = [
     image: "images/entries/angelic-acid.png",
     rarity: 57,
     description: "A pungent organic acid first isolated from angelica root, used in small amounts in fragrance chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -702,17 +712,17 @@ const defaultEntries = [
     image: "images/entries/ruthenium-2.png",
     rarity: 59,
     description: "A rare, hard platinum-group metal used to harden other metals in alloys.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "rarity-argyrodite",
     name: "Argyrodite",
     category: "Compound",
-    image: null,
+    image: "images/entries/argyrodite.png",
     rarity: 60,
     description: "A rare silver-germanium sulfide mineral, famous as the material in which the element germanium was first discovered in 1886.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -722,7 +732,7 @@ const defaultEntries = [
     image: "images/entries/stolzite.png",
     rarity: 60,
     description: "A rare lead tungstate mineral, prized by collectors for its resinous luster and vivid crystals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -732,7 +742,7 @@ const defaultEntries = [
     image: "images/entries/toluene.png",
     rarity: 60,
     description: "A sweet-smelling aromatic solvent used in paints, adhesives, and fuel.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -742,7 +752,7 @@ const defaultEntries = [
     image: null,
     rarity: 60,
     description: "The first widely used antibiotic, discovered from Penicillium mold in 1928.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -752,7 +762,7 @@ const defaultEntries = [
     image: null,
     rarity: 60,
     description: "The most common form of asbestos, once widely used in insulation before health risks were confirmed.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -762,7 +772,7 @@ const defaultEntries = [
     image: "images/entries/mustard-gas.png",
     rarity: 60,
     description: "A blistering chemical warfare agent that causes severe skin, eye, and lung damage.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -772,7 +782,7 @@ const defaultEntries = [
     image: null,
     rarity: 60,
     description: "An extremely rare diamond color variety, among the most valuable gemstones in the world.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -782,7 +792,7 @@ const defaultEntries = [
     image: "images/entries/opal.png",
     rarity: 61,
     description: "A hydrated silica mineral known for its play of shifting rainbow colors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -792,7 +802,7 @@ const defaultEntries = [
     image: "images/entries/bromic-acid.png",
     rarity: 61,
     description: "An unstable, strongly oxidizing acid of bromine, used mainly in chemical synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -802,7 +812,7 @@ const defaultEntries = [
     image: "images/entries/leucine.png",
     rarity: 61,
     description: "An essential branched-chain amino acid important for muscle protein synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -812,7 +822,7 @@ const defaultEntries = [
     image: "images/entries/carbon-14.png",
     rarity: 61,
     description: "A radioactive carbon isotope used to date organic material through radiocarbon dating.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -822,7 +832,7 @@ const defaultEntries = [
     image: "images/entries/electric-radon.png",
     rarity: 62,
     description: "Radon gas ionized to glow, though its intense radioactivity makes this mostly a novelty rather than practical lighting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-07T00:00:00.000Z",
   },
   {
@@ -832,7 +842,7 @@ const defaultEntries = [
     image: "images/entries/technetium.png",
     rarity: 63,
     description: "The lightest element with no stable isotopes, produced artificially and used in medical imaging.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-08T00:00:00.000Z",
   },
   {
@@ -842,7 +852,7 @@ const defaultEntries = [
     image: "images/entries/diphosgene.png",
     rarity: 63,
     description: "A liquid chemical warfare agent related to phosgene, historically used in World War One.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-04T00:00:00.000Z",
   },
   {
@@ -852,7 +862,7 @@ const defaultEntries = [
     image: "images/entries/sodium-potassium-alloy.png",
     rarity: 64,
     description: "A liquid metal alloy of sodium and potassium that ignites on contact with water.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -862,7 +872,7 @@ const defaultEntries = [
     image: "images/entries/jadeite.png",
     rarity: 64,
     description: "A hard, prized jade mineral valued especially in Chinese carving traditions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -872,7 +882,7 @@ const defaultEntries = [
     image: "images/entries/potassium-permanganate.png",
     rarity: 64,
     description: "A dark purple oxidizing compound used as a disinfectant and water treatment agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-28T00:00:00.000Z",
   },
   {
@@ -882,7 +892,7 @@ const defaultEntries = [
     image: "images/entries/chlorophyll.png",
     rarity: 65,
     description: "The green pigment in plants that captures light energy for photosynthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -892,7 +902,7 @@ const defaultEntries = [
     image: "images/entries/histidine.png",
     rarity: 65,
     description: "An essential amino acid important for growth and tissue repair.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-13T00:00:00.000Z",
   },
   {
@@ -902,7 +912,7 @@ const defaultEntries = [
     image: null,
     rarity: 70,
     description: "A long-lived neptunium isotope produced in nuclear reactors, of interest for potential future reactor fuel.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -911,8 +921,8 @@ const defaultEntries = [
     category: "Compound",
     image: null,
     rarity: 70,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -921,8 +931,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/indium-gallium-nitride.png",
     rarity: 70,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-02T00:00:00.000Z",
   },
   {
@@ -931,8 +941,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/psilocybin-2.png",
     rarity: 70,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -942,7 +952,7 @@ const defaultEntries = [
     image: "images/entries/galena.png",
     rarity: 70,
     description: "The primary ore of lead, a heavy, metallic-gray mineral historically also used as an early radio detector.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-26T00:00:00.000Z",
   },
   {
@@ -952,7 +962,7 @@ const defaultEntries = [
     image: "images/entries/larimar.png",
     rarity: 73,
     description: "A rare, sky-blue variety of the mineral pectolite found only in the Dominican Republic.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-13T00:00:00.000Z",
   },
   {
@@ -961,8 +971,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/mercuryii-cyanide.png",
     rarity: 74,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -972,7 +982,7 @@ const defaultEntries = [
     image: "images/entries/nitrogen.png",
     rarity: 75,
     description: "A colorless, inert gas that makes up about 78% of Earth's atmosphere.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -982,7 +992,7 @@ const defaultEntries = [
     image: "images/entries/carbonic-acid.png",
     rarity: 75,
     description: "A weak acid formed when carbon dioxide dissolves in water, giving soda its fizz.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-08T00:00:00.000Z",
   },
   {
@@ -992,7 +1002,7 @@ const defaultEntries = [
     image: "images/entries/hydrogen-cyanide.png",
     rarity: 75,
     description: "A highly toxic, volatile compound that blocks cellular respiration.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-15T00:00:00.000Z",
   },
   {
@@ -1002,7 +1012,7 @@ const defaultEntries = [
     image: "images/entries/curium.png",
     rarity: 75,
     description: "A synthetic radioactive element named after Marie and Pierre Curie.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -1012,7 +1022,7 @@ const defaultEntries = [
     image: "images/entries/osmium.png",
     rarity: 75,
     description: "The densest naturally occurring element, a hard blue-gray platinum-group metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-24T00:00:00.000Z",
   },
   {
@@ -1022,7 +1032,7 @@ const defaultEntries = [
     image: "images/entries/purple-fluorite.png",
     rarity: 75,
     description: "A purple variety of fluorite, a soft mineral known for vivid, varied coloring.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1032,7 +1042,7 @@ const defaultEntries = [
     image: "images/entries/bromine.png",
     rarity: 76,
     description: "A reddish-brown liquid halogen with a sharp, irritating odor.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -1042,7 +1052,7 @@ const defaultEntries = [
     image: "images/entries/depleted-uranium-hexafluoride.png",
     rarity: 76,
     description: "A dense chemical compound left over from uranium enrichment, stored as a byproduct of nuclear fuel production.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-22T00:00:00.000Z",
   },
   {
@@ -1052,7 +1062,7 @@ const defaultEntries = [
     image: "images/entries/uraninite.png",
     rarity: 77,
     description: "A black radioactive mineral that is the primary ore of uranium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-11T00:00:00.000Z",
   },
   {
@@ -1062,7 +1072,7 @@ const defaultEntries = [
     image: "images/entries/rainbow-calcite.png",
     rarity: 78,
     description: "A banded calcite variety showing multicolored layers, often under UV light.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -1072,7 +1082,7 @@ const defaultEntries = [
     image: "images/entries/somatotropin.png",
     rarity: 78,
     description: "Another name for human growth hormone, which regulates growth and metabolism.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-07-25T00:00:00.000Z",
   },
   {
@@ -1082,7 +1092,7 @@ const defaultEntries = [
     image: "images/entries/molten-gold.png",
     rarity: 79,
     description: "Gold heated past its melting point of 1064C into liquid form.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -1092,7 +1102,7 @@ const defaultEntries = [
     image: "images/entries/potassium-cyanide.png",
     rarity: 80,
     description: "A highly toxic white salt that releases lethal hydrogen cyanide in acid or moisture.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1102,7 +1112,7 @@ const defaultEntries = [
     image: "images/entries/plutonium-gallium-alloy.png",
     rarity: 80,
     description: "An alloy that stabilizes plutonium in a workable crystal phase, historically used in nuclear weapon pits.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1112,7 +1122,7 @@ const defaultEntries = [
     image: "images/entries/bismuth.png",
     rarity: 83,
     description: "A brittle metal famous for forming colorful, geometric oxide crystals when cooled slowly.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -1122,7 +1132,7 @@ const defaultEntries = [
     image: "images/entries/potassium-acetate.png",
     rarity: 84,
     description: "A salt used as a de-icer, food preservative, and in medical IV fluids.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -1132,7 +1142,7 @@ const defaultEntries = [
     image: "images/entries/lazurite.png",
     rarity: 84,
     description: "The deep blue mineral responsible for the color of lapis lazuli.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1142,7 +1152,7 @@ const defaultEntries = [
     image: "images/entries/ammonium-cyanide.png",
     rarity: 84,
     description: "An unstable, toxic salt of cyanide that readily decomposes and releases hydrogen cyanide gas.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -1152,7 +1162,7 @@ const defaultEntries = [
     image: "images/entries/hydrogen-peroxide.png",
     rarity: 84,
     description: "A reactive oxidizer used as a disinfectant, bleaching agent, and rocket propellant component.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-25T00:00:00.000Z",
   },
   {
@@ -1162,7 +1172,7 @@ const defaultEntries = [
     image: "images/entries/monel.png",
     rarity: 85,
     description: "A strong, corrosion-resistant nickel-copper alloy used in marine and chemical equipment.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1172,7 +1182,7 @@ const defaultEntries = [
     image: "images/entries/astatine.png",
     rarity: 85,
     description: "The rarest naturally occurring element, an extremely unstable radioactive halogen.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-28T00:00:00.000Z",
   },
   {
@@ -1181,8 +1191,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/astatobenzene.png",
     rarity: 85,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-26T00:00:00.000Z",
   },
   {
@@ -1192,7 +1202,7 @@ const defaultEntries = [
     image: "images/entries/potassium.png",
     rarity: 86,
     description: "A soft, reactive alkali metal essential for nerve and muscle function, and violently reactive with water.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1202,17 +1212,17 @@ const defaultEntries = [
     image: null,
     rarity: 89,
     description: "A hormone produced in the stomach that signals hunger to the brain.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "rarity-ambrein",
     name: "Ambrein",
     category: "Compound",
-    image: null,
+    image: "images/entries/ambrein.png",
     rarity: 90,
     description: "A waxy compound found in ambergris, prized in perfumery for its long-lasting musky scent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1222,7 +1232,7 @@ const defaultEntries = [
     image: null,
     rarity: 90,
     description: "Copernicium is a synthetic superheavy element so unstable it's made and studied atom-by-atom; it's predicted to behave like a volatile, gas-like metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1232,7 +1242,7 @@ const defaultEntries = [
     image: "images/entries/black-tar-heroin.png",
     rarity: 90,
     description: "A crude, dark form of heroin common in illicit markets, associated with significant overdose risk.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -1242,7 +1252,7 @@ const defaultEntries = [
     image: "images/entries/gadolinium.png",
     rarity: 90,
     description: "A rare-earth metal with unusual magnetic and neutron-absorbing properties, widely used as an MRI contrast agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -1252,7 +1262,7 @@ const defaultEntries = [
     image: "images/entries/lead.png",
     rarity: 91,
     description: "A soft, dense, toxic heavy metal historically used in pipes, paint, and batteries.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -1262,7 +1272,7 @@ const defaultEntries = [
     image: "images/entries/uranyl-hydroxide.png",
     rarity: 91,
     description: "A yellow compound formed when uranium salts react with water, part of uranium's complex aqueous chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -1271,8 +1281,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/quark.png",
     rarity: 93,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-16T00:00:00.000Z",
   },
   {
@@ -1282,7 +1292,7 @@ const defaultEntries = [
     image: "images/entries/malic-acid.png",
     rarity: 93,
     description: "An organic acid giving tart apples and other fruits their sour taste.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-12T00:00:00.000Z",
   },
   {
@@ -1292,7 +1302,7 @@ const defaultEntries = [
     image: "images/entries/thiocyanogen.png",
     rarity: 93,
     description: "An unstable, reactive pseudohalogen compound related to cyanide chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -1302,7 +1312,7 @@ const defaultEntries = [
     image: "images/entries/orpiment.png",
     rarity: 93,
     description: "A vivid yellow arsenic sulfide mineral, historically used as a pigment and medicine despite being highly toxic.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-14T00:00:00.000Z",
   },
   {
@@ -1312,7 +1322,7 @@ const defaultEntries = [
     image: "images/entries/tritium.png",
     rarity: 94,
     description: "A radioactive hydrogen isotope used in self-powered lighting and nuclear fusion research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -1322,7 +1332,7 @@ const defaultEntries = [
     image: "images/entries/chloropicrin.png",
     rarity: 94,
     description: "A toxic, tear-inducing compound once used as a chemical weapon and now mainly as an agricultural fumigant.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -1332,17 +1342,17 @@ const defaultEntries = [
     image: "images/entries/korean-jade.png",
     rarity: 95,
     description: "A trade name for pale green serpentine or similar stone marketed as jade, distinct from true jadeite.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-26T00:00:00.000Z",
   },
   {
     id: "rarity-polane",
     name: "Polane",
     category: "Compound",
-    image: null,
+    image: "images/entries/polane.png",
     rarity: 96,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Polonium hydride (PoH2), an extremely unstable and radioactive compound, the heaviest member of the chalcogen hydride family.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1352,7 +1362,7 @@ const defaultEntries = [
     image: "images/entries/cinnabar.png",
     rarity: 98,
     description: "A bright red mercury sulfide mineral, historically ground into the pigment vermilion despite its toxicity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-01T00:00:00.000Z",
   },
   {
@@ -1362,7 +1372,7 @@ const defaultEntries = [
     image: "images/entries/curite.png",
     rarity: 98,
     description: "An orange to reddish uranium mineral formed by the alteration of uraninite.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-28T00:00:00.000Z",
   },
   {
@@ -1372,7 +1382,7 @@ const defaultEntries = [
     image: "images/entries/sklodowskite.png",
     rarity: 98,
     description: "A bright yellow, radioactive uranium mineral named after Marie Sklodowska-Curie, formed where uranium ores oxidize.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-27T00:00:00.000Z",
   },
   {
@@ -1382,7 +1392,7 @@ const defaultEntries = [
     image: "images/entries/magnesium-iodide.png",
     rarity: 99,
     description: "A moisture-sensitive salt of magnesium used in some organic synthesis reactions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-28T00:00:00.000Z",
   },
   {
@@ -1392,7 +1402,7 @@ const defaultEntries = [
     image: "images/entries/semiheavy-water.png",
     rarity: 99,
     description: "A form of water where one hydrogen atom is replaced with deuterium, used in nuclear and chemical research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-16T00:00:00.000Z",
   },
   {
@@ -1402,7 +1412,7 @@ const defaultEntries = [
     image: "images/entries/mango-quartz.png",
     rarity: 100,
     description: "A vividly orange-yellow dyed quartz variety, named for its resemblance to the fruit's color.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1412,17 +1422,17 @@ const defaultEntries = [
     image: null,
     rarity: 100,
     description: "A soft, malleable metal historically alloyed with copper to make bronze.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "rarity-sulphur",
     name: "Sulphur",
     category: "Compound",
-    image: null,
+    image: "images/entries/sulphur.png",
     rarity: 100,
     description: "A yellow nonmetal essential to life, historically called brimstone.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1431,8 +1441,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/liquid-flevorium.png",
     rarity: 100,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1442,7 +1452,7 @@ const defaultEntries = [
     image: "images/entries/cyanogen-chloride.png",
     rarity: 100,
     description: "A highly toxic, volatile compound historically stockpiled as a chemical warfare agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -1452,7 +1462,7 @@ const defaultEntries = [
     image: "images/entries/ununennium.png",
     rarity: 100,
     description: "The placeholder name for element 119, a hypothetical superheavy element that has not yet been confirmed to exist.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-17T00:00:00.000Z",
   },
   {
@@ -1462,7 +1472,7 @@ const defaultEntries = [
     image: "images/entries/vanadium.png",
     rarity: 101,
     description: "A hard transition metal mainly used to strengthen steel alloys.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -1472,7 +1482,7 @@ const defaultEntries = [
     image: "images/entries/lysine.png",
     rarity: 102,
     description: "An essential amino acid important for protein synthesis and calcium absorption.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1482,7 +1492,7 @@ const defaultEntries = [
     image: "images/entries/technetium-99m.png",
     rarity: 103,
     description: "A short-lived radioactive isotope that is the most widely used tracer in nuclear medicine imaging.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-08T00:00:00.000Z",
   },
   {
@@ -1492,7 +1502,7 @@ const defaultEntries = [
     image: "images/entries/cysteine.png",
     rarity: 103,
     description: "A sulfur-containing amino acid important for protein structure and antioxidant defense.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -1502,7 +1512,7 @@ const defaultEntries = [
     image: "images/entries/chevron-amethyst-2.png",
     rarity: 103,
     description: "A banded variety of amethyst and white quartz, named for its distinctive V-shaped or chevron pattern.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1512,7 +1522,7 @@ const defaultEntries = [
     image: "images/entries/aurichalcite.png",
     rarity: 104,
     description: "A delicate, pale blue-green copper-zinc carbonate mineral, often forming feathery crystal clusters.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-25T00:00:00.000Z",
   },
   {
@@ -1522,7 +1532,7 @@ const defaultEntries = [
     image: "images/entries/indium.png",
     rarity: 105,
     description: "A soft, silvery metal used in touchscreens and semiconductors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-22T00:00:00.000Z",
   },
   {
@@ -1532,7 +1542,7 @@ const defaultEntries = [
     image: "images/entries/loratadine.png",
     rarity: 106,
     description: "A common non-drowsy antihistamine used to treat allergy symptoms.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1542,7 +1552,7 @@ const defaultEntries = [
     image: "images/entries/ethyl-bromoacetate.png",
     rarity: 108,
     description: "A reactive, tear-inducing organic compound used as a chemical intermediate and historically as a riot-control agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -1552,7 +1562,7 @@ const defaultEntries = [
     image: "images/entries/abhurite.png",
     rarity: 110,
     description: "A rare tin mineral formed from the corrosion of tin-bearing shipwreck artifacts in seawater.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1561,8 +1571,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/nicotine.png",
     rarity: 110,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1572,7 +1582,7 @@ const defaultEntries = [
     image: "images/entries/qingheiite.png",
     rarity: 110,
     description: "A rare sodium-manganese-aluminum silicate mineral first described in China.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1581,8 +1591,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/phosphotungstic-acid.png",
     rarity: 110,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1592,7 +1602,7 @@ const defaultEntries = [
     image: "images/entries/arsenical-copper.png",
     rarity: 110,
     description: "An early copper-arsenic alloy used before tin bronze became widespread in the Bronze Age.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-08T00:00:00.000Z",
   },
   {
@@ -1602,7 +1612,7 @@ const defaultEntries = [
     image: "images/entries/cryolite.png",
     rarity: 110,
     description: "A rare mineral historically used as a flux to extract aluminium from bauxite ore.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -1611,8 +1621,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/saccharin.png",
     rarity: 110,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1622,7 +1632,7 @@ const defaultEntries = [
     image: "images/entries/brucite-2.png",
     rarity: 111,
     description: "A soft, pale mineral made of magnesium hydroxide, often found in metamorphic rocks.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1632,7 +1642,7 @@ const defaultEntries = [
     image: "images/entries/gold-170-2.png",
     rarity: 112,
     description: "An extremely short-lived, highly unstable radioactive isotope of gold produced only in laboratories.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1642,7 +1652,7 @@ const defaultEntries = [
     image: "images/entries/niobium.png",
     rarity: 112,
     description: "A soft gray metal used in superconducting magnets and jet engine alloys.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1652,7 +1662,7 @@ const defaultEntries = [
     image: "images/entries/caesium.png",
     rarity: 114,
     description: "A soft, gold-tinted alkali metal that defines the modern second via its atomic clock.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1662,7 +1672,7 @@ const defaultEntries = [
     image: "images/entries/tabun.png",
     rarity: 114,
     description: "One of the first nerve agents ever synthesized, developed in Germany in the 1930s.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-01T00:00:00.000Z",
   },
   {
@@ -1672,7 +1682,7 @@ const defaultEntries = [
     image: "images/entries/permanganic-acid.png",
     rarity: 115,
     description: "A strong, unstable oxidizing acid of manganese, rarely isolated outside of solution.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -1682,7 +1692,7 @@ const defaultEntries = [
     image: "images/entries/magnesium.png",
     rarity: 115,
     description: "A lightweight metal essential to plant and animal life, burns with a brilliant white flame.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-07-19T00:00:00.000Z",
   },
   {
@@ -1692,7 +1702,7 @@ const defaultEntries = [
     image: "images/entries/hassium.png",
     rarity: 117,
     description: "A synthetic superheavy radioactive element, produced only in particle accelerators.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1702,7 +1712,7 @@ const defaultEntries = [
     image: "images/entries/tantalum.png",
     rarity: 120,
     description: "A dense, corrosion-resistant metal widely used in electronic capacitors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-23T00:00:00.000Z",
   },
   {
@@ -1712,7 +1722,7 @@ const defaultEntries = [
     image: "images/entries/azidoazide-azide.png",
     rarity: 120,
     description: "An extraordinarily unstable nitrogen-rich compound reputed to be one of the most explosive substances ever synthesized.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -1722,7 +1732,7 @@ const defaultEntries = [
     image: null,
     rarity: 120,
     description: "A highly strained, unstable hydrocarbon of mainly theoretical and research interest.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1732,7 +1742,7 @@ const defaultEntries = [
     image: "images/entries/fructose.png",
     rarity: 120,
     description: "A simple sugar found naturally in fruit and honey.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-20T00:00:00.000Z",
   },
   {
@@ -1742,7 +1752,7 @@ const defaultEntries = [
     image: "images/entries/aluminium.png",
     rarity: 120,
     description: "A lightweight, corrosion-resistant metal used throughout modern manufacturing and packaging.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -1752,7 +1762,7 @@ const defaultEntries = [
     image: "images/entries/ozone.png",
     rarity: 120,
     description: "A reactive form of oxygen that shields Earth from ultraviolet radiation in the upper atmosphere.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-13T00:00:00.000Z",
   },
   {
@@ -1762,7 +1772,7 @@ const defaultEntries = [
     image: "images/entries/polonium-210.png",
     rarity: 120,
     description: "An intensely radioactive polonium isotope, notorious for its use as a poison.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -1772,7 +1782,7 @@ const defaultEntries = [
     image: "images/entries/buckministerfullerene.png",
     rarity: 121,
     description: "A soccer-ball-shaped molecule made entirely of 60 carbon atoms, one of the first fullerenes discovered.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -1782,7 +1792,7 @@ const defaultEntries = [
     image: "images/entries/tyrosine.png",
     rarity: 122,
     description: "An amino acid that serves as a precursor to dopamine and other neurotransmitters.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -1792,7 +1802,7 @@ const defaultEntries = [
     image: "images/entries/electric-krypton-2.png",
     rarity: 123,
     description: "Krypton gas ionized to glow, used in specialty lighting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1802,7 +1812,7 @@ const defaultEntries = [
     image: "images/entries/brochantite.png",
     rarity: 123,
     description: "A vivid green copper sulfate mineral that forms where copper ores weather.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -1812,7 +1822,7 @@ const defaultEntries = [
     image: "images/entries/methyl-vinyl-ketone.png",
     rarity: 123,
     description: "A highly reactive, toxic liquid used as a building block in organic synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-07T00:00:00.000Z",
   },
   {
@@ -1822,7 +1832,7 @@ const defaultEntries = [
     image: "images/entries/sodium-fluoride.png",
     rarity: 123,
     description: "A compound added to public water supplies and toothpaste to help prevent tooth decay.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-31T00:00:00.000Z",
   },
   {
@@ -1832,7 +1842,7 @@ const defaultEntries = [
     image: "images/entries/sabinaite.png",
     rarity: 124,
     description: "An extremely rare anhydrous zirconium-titanium carbonate mineral, unusual because natural anhydrous zirconium carbonates almost never form.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1842,7 +1852,7 @@ const defaultEntries = [
     image: "images/entries/uranyl-acetate.png",
     rarity: 124,
     description: "A yellow, fluorescent uranium salt once widely used to stain samples for electron microscopy.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1852,7 +1862,7 @@ const defaultEntries = [
     image: "images/entries/mescaline.png",
     rarity: 124,
     description: "A naturally occurring psychedelic compound found in the peyote and San Pedro cacti.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -1862,7 +1872,7 @@ const defaultEntries = [
     image: "images/entries/technetium-99.png",
     rarity: 124,
     description: "A long-lived radioactive technetium isotope produced as a byproduct of nuclear fission.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -1872,7 +1882,7 @@ const defaultEntries = [
     image: "images/entries/blue-calcite.png",
     rarity: 124,
     description: "A pale blue variety of calcite, often fluorescent, popular among mineral collectors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -1882,7 +1892,7 @@ const defaultEntries = [
     image: "images/entries/graphene.png",
     rarity: 124,
     description: "A single layer of carbon atoms arranged in a honeycomb lattice, prized for its exceptional strength and conductivity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1891,8 +1901,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/scrutinyite.png",
     rarity: 125,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1902,7 +1912,7 @@ const defaultEntries = [
     image: "images/entries/adenosine-triphosphate.png",
     rarity: 125,
     description: "The primary energy-carrying molecule used by cells to power nearly all biological processes.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -1912,7 +1922,7 @@ const defaultEntries = [
     image: "images/entries/polonium-tetranitrate.png",
     rarity: 125,
     description: "A rarely-studied compound of the intensely radioactive element polonium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -1922,7 +1932,7 @@ const defaultEntries = [
     image: "images/entries/sulfuryl-diazide.png",
     rarity: 125,
     description: "A highly unstable, explosive sulfur-nitrogen compound studied mainly in specialized research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -1932,7 +1942,7 @@ const defaultEntries = [
     image: "images/entries/polonium-diiodide.png",
     rarity: 125,
     description: "A rare, unstable compound of radioactive polonium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -1942,7 +1952,7 @@ const defaultEntries = [
     image: "images/entries/cobalt-blue.png",
     rarity: 125,
     description: "A deep blue pigment made from cobalt oxide, valued for its stability and rich color since ancient times.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-01T00:00:00.000Z",
   },
   {
@@ -1952,7 +1962,7 @@ const defaultEntries = [
     image: "images/entries/oxalic-acid.png",
     rarity: 125,
     description: "A strong organic acid found naturally in plants like rhubarb and spinach, also used as a rust and stain remover.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-26T00:00:00.000Z",
   },
   {
@@ -1962,7 +1972,7 @@ const defaultEntries = [
     image: "images/entries/potassium-ferricyanide.png",
     rarity: 126,
     description: "A bright red-orange salt used in photography, dyeing, and as a mild oxidizing agent, less toxic than its name suggests.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -1972,7 +1982,7 @@ const defaultEntries = [
     image: "images/entries/iodine.png",
     rarity: 127,
     description: "A dark violet-black halogen essential for thyroid hormone production.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-14T00:00:00.000Z",
   },
   {
@@ -1981,8 +1991,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/samariumiii-arsenide.png",
     rarity: 128,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-21T00:00:00.000Z",
   },
   {
@@ -1992,7 +2002,7 @@ const defaultEntries = [
     image: "images/entries/rhenium.png",
     rarity: 129,
     description: "One of the rarest metals in Earth's crust, valued for extreme heat resistance.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -2002,17 +2012,17 @@ const defaultEntries = [
     image: "images/entries/hemoglobin.png",
     rarity: 130,
     description: "The iron-containing protein in red blood cells that carries oxygen through the body.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "rarity-potassium-pyrosulphate",
     name: "Potassium Pyrosulphate",
     category: "Compound",
-    image: null,
+    image: "images/entries/potassium-pyrosulphate.png",
     rarity: 130,
     description: "An inorganic salt used as a flux in analytical chemistry to dissolve minerals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2022,7 +2032,7 @@ const defaultEntries = [
     image: "images/entries/sodium-cyanide.png",
     rarity: 130,
     description: "A highly toxic white salt used industrially in gold mining and metal treatment.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-16T00:00:00.000Z",
   },
   {
@@ -2032,17 +2042,17 @@ const defaultEntries = [
     image: "images/entries/uranocircite.png",
     rarity: 130,
     description: "A yellow-green, fluorescent uranium mineral belonging to the autunite group, containing barium and glowing green under UV light.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "rarity-ecstasy",
     name: "Ecstasy",
     category: "Compound",
-    image: null,
+    image: "images/entries/ecstasy.png",
     rarity: 130,
     description: "The street name for MDMA, a synthetic stimulant and psychedelic with a high potential for misuse.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2052,7 +2062,7 @@ const defaultEntries = [
     image: "images/entries/cyanogen.png",
     rarity: 133,
     description: "A toxic, flammable gas made of two cyanide groups bonded together.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -2062,7 +2072,7 @@ const defaultEntries = [
     image: "images/entries/cyanogen-fluoride-2.png",
     rarity: 133,
     description: "A toxic, reactive gas used in specialized organic synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2072,7 +2082,7 @@ const defaultEntries = [
     image: "images/entries/azurite.png",
     rarity: 133,
     description: "A vivid blue copper carbonate mineral, historically ground into pigment before more stable blues replaced it.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-08-02T00:00:00.000Z",
   },
   {
@@ -2082,7 +2092,7 @@ const defaultEntries = [
     image: "images/entries/milky-quartz.png",
     rarity: 134,
     description: "A cloudy white variety of quartz colored by tiny fluid or gas inclusions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-13T00:00:00.000Z",
   },
   {
@@ -2092,7 +2102,7 @@ const defaultEntries = [
     image: "images/entries/cuprite.png",
     rarity: 134,
     description: "A red copper oxide mineral and an important ore of copper.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2102,7 +2112,7 @@ const defaultEntries = [
     image: "images/entries/bismuth-pentafluoride.png",
     rarity: 134,
     description: "A powerful fluorinating agent used in specialized industrial chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2112,7 +2122,7 @@ const defaultEntries = [
     image: "images/entries/phantom-quartz.png",
     rarity: 134,
     description: "A quartz crystal that captures a ghostly outline of an earlier growth stage within itself.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -2122,7 +2132,7 @@ const defaultEntries = [
     image: "images/entries/liquid-xenon.png",
     rarity: 135,
     description: "Xenon gas cooled into liquid form, used in some particle physics detectors.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2132,7 +2142,7 @@ const defaultEntries = [
     image: null,
     rarity: 136,
     description: "A high-temperature feldspar mineral typically found in volcanic rocks.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2142,7 +2152,7 @@ const defaultEntries = [
     image: "images/entries/abellaite.png",
     rarity: 136,
     description: "A rare lead-sodium carbonate mineral first described in Spain in 2014.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-04T00:00:00.000Z",
   },
   {
@@ -2152,7 +2162,7 @@ const defaultEntries = [
     image: "images/entries/molten-tungsten.png",
     rarity: 136,
     description: "Tungsten heated past its extraordinarily high melting point of 3422C, the highest of any metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -2162,7 +2172,7 @@ const defaultEntries = [
     image: "images/entries/diborane.png",
     rarity: 138,
     description: "A toxic, reactive boron-hydrogen gas used in rocket fuels and semiconductor manufacturing.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-04T00:00:00.000Z",
   },
   {
@@ -2172,7 +2182,7 @@ const defaultEntries = [
     image: "images/entries/tryptophan.png",
     rarity: 139,
     description: "An essential amino acid and precursor to the neurotransmitter serotonin.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -2182,7 +2192,7 @@ const defaultEntries = [
     image: "images/entries/butane.png",
     rarity: 140,
     description: "A flammable hydrocarbon gas commonly used as lighter and camp stove fuel.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2192,7 +2202,7 @@ const defaultEntries = [
     image: null,
     rarity: 140,
     description: "One of the most potent toxins known, produced by bacteria and used medically in tiny doses as Botox.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2202,7 +2212,7 @@ const defaultEntries = [
     image: null,
     rarity: 140,
     description: "A potent plant-derived compound used medically for motion sickness, with a history of misuse as a incapacitating drug.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2212,7 +2222,7 @@ const defaultEntries = [
     image: "images/entries/xenon.png",
     rarity: 140,
     description: "A heavy, rare noble gas used in high-intensity lamps and ion thrusters.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -2222,7 +2232,7 @@ const defaultEntries = [
     image: "images/entries/selenic-acid.png",
     rarity: 140,
     description: "A strong, corrosive acid of selenium, similar in strength to sulfuric acid.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-25T00:00:00.000Z",
   },
   {
@@ -2232,7 +2242,7 @@ const defaultEntries = [
     image: "images/entries/coumarin.png",
     rarity: 140,
     description: "A sweet-smelling plant compound responsible for the scent of fresh-cut hay and used in perfumery.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-07-18T00:00:00.000Z",
   },
   {
@@ -2242,7 +2252,7 @@ const defaultEntries = [
     image: "images/entries/egyptian-blue.png",
     rarity: 142,
     description: "Considered the first synthetic pigment in history, used by the ancient Egyptians over 4,000 years ago.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -2252,7 +2262,7 @@ const defaultEntries = [
     image: "images/entries/gallic-acid.png",
     rarity: 143,
     description: "A plant-derived acid found in tea, oak galls, and wine, used as an antioxidant and in ink and dye production.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-29T00:00:00.000Z",
   },
   {
@@ -2262,7 +2272,7 @@ const defaultEntries = [
     image: "images/entries/fipronil.png",
     rarity: 143,
     description: "A broad-spectrum insecticide used in flea and tick treatments for pets.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -2272,7 +2282,7 @@ const defaultEntries = [
     image: "images/entries/adiponitrile.png",
     rarity: 143,
     description: "An industrial chemical used mainly as a precursor in the manufacture of nylon.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -2282,7 +2292,7 @@ const defaultEntries = [
     image: null,
     rarity: 145,
     description: "A compound used to treat iodine deficiency and to protect the thyroid during radiation exposure.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2292,7 +2302,7 @@ const defaultEntries = [
     image: "images/entries/calcium-cyanide.png",
     rarity: 145,
     description: "A toxic compound historically used as a pesticide and fumigant.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2302,7 +2312,7 @@ const defaultEntries = [
     image: "images/entries/selenium-cyanide.png",
     rarity: 145,
     description: "A toxic organoselenium compound used in specialized chemical synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-02T00:00:00.000Z",
   },
   {
@@ -2311,8 +2321,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/vasopressin.png",
     rarity: 145,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-02T00:00:00.000Z",
   },
   {
@@ -2322,7 +2332,7 @@ const defaultEntries = [
     image: "images/entries/tiniv-chloride.png",
     rarity: 145,
     description: "A fuming, corrosive liquid used industrially as a catalyst and in the production of tin compounds.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-05T00:00:00.000Z",
   },
   {
@@ -2332,7 +2342,7 @@ const defaultEntries = [
     image: "images/entries/lead-ii-iodide-2.png",
     rarity: 145,
     description: "A bright yellow compound, famous in chemistry classrooms for the striking golden precipitate it forms.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2342,7 +2352,7 @@ const defaultEntries = [
     image: "images/entries/molybdenum-disulfide.png",
     rarity: 145,
     description: "A slippery, dark compound widely used as a dry lubricant resistant to extreme temperatures.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -2352,7 +2362,7 @@ const defaultEntries = [
     image: "images/entries/hydrogen-7-2.png",
     rarity: 146,
     description: "An extremely unstable, laboratory-synthesized isotope of hydrogen that exists for less than a trillionth of a second.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2362,7 +2372,7 @@ const defaultEntries = [
     image: "images/entries/scheelite.png",
     rarity: 146,
     description: "A tungsten ore mineral, notable for glowing bright blue-white under ultraviolet light.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-24T00:00:00.000Z",
   },
   {
@@ -2372,7 +2382,7 @@ const defaultEntries = [
     image: "images/entries/trifluoroacetyl-chloride-2.png",
     rarity: 146,
     description: "A reactive, corrosive fluorinated compound used as a reagent in organic synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2382,7 +2392,7 @@ const defaultEntries = [
     image: "images/entries/chlorodifluoromethane.png",
     rarity: 147,
     description: "A refrigerant gas, once common under the name HCFC-22 before being phased out for ozone-depletion concerns.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -2392,7 +2402,7 @@ const defaultEntries = [
     image: "images/entries/molten-silver.png",
     rarity: 147,
     description: "Silver heated past its melting point of about 962C into liquid metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -2402,7 +2412,7 @@ const defaultEntries = [
     image: "images/entries/methyl-anthranilate.png",
     rarity: 147,
     description: "A compound with a grape-like smell, used as a flavoring and in some bird-repellent products.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -2412,7 +2422,7 @@ const defaultEntries = [
     image: "images/entries/ytterbium.png",
     rarity: 148,
     description: "A soft rare-earth metal used in atomic clocks and fiber lasers.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -2422,7 +2432,7 @@ const defaultEntries = [
     image: "images/entries/acrylonitrile.png",
     rarity: 148,
     description: "A key industrial monomer used to manufacture acrylic fibers and plastics.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -2432,7 +2442,7 @@ const defaultEntries = [
     image: "images/entries/enhydro-agate.png",
     rarity: 150,
     description: "An agate that formed with a pocket of ancient water sealed inside, sometimes still liquid today.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2442,7 +2452,7 @@ const defaultEntries = [
     image: "images/entries/fluorapophyllite.png",
     rarity: 150,
     description: "A glassy, often pale green mineral found lining cavities in volcanic rock.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-08T00:00:00.000Z",
   },
   {
@@ -2452,7 +2462,7 @@ const defaultEntries = [
     image: "images/entries/riebeckite.png",
     rarity: 150,
     description: "A blue-black amphibole mineral; its fibrous form is the basis of blue asbestos (crocidolite).",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -2462,7 +2472,7 @@ const defaultEntries = [
     image: null,
     rarity: 150,
     description: "A brown asbestos mineral once widely used for insulation, now recognized as a serious health hazard.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2472,7 +2482,7 @@ const defaultEntries = [
     image: "images/entries/neodymium.png",
     rarity: 150,
     description: "A rare-earth metal used to make the strongest commercially available permanent magnets.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -2482,7 +2492,7 @@ const defaultEntries = [
     image: "images/entries/promethium.png",
     rarity: 150,
     description: "A radioactive rare-earth element with almost no natural abundance.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -2492,7 +2502,7 @@ const defaultEntries = [
     image: "images/entries/copper-67.png",
     rarity: 150,
     description: "A radioactive copper isotope studied for use in targeted cancer radiotherapy.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-20T00:00:00.000Z",
   },
   {
@@ -2501,8 +2511,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/copper-ii-sulphate.png",
     rarity: 150,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2512,7 +2522,7 @@ const defaultEntries = [
     image: "images/entries/pezzottaite.png",
     rarity: 150,
     description: "A rare pink-to-red beryl-family gemstone discovered in Madagascar in 2002.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -2522,7 +2532,7 @@ const defaultEntries = [
     image: "images/entries/coober-pedy-opal.png",
     rarity: 150,
     description: "Precious opal mined from Coober Pedy, Australia, the world's largest opal-producing region.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2532,7 +2542,7 @@ const defaultEntries = [
     image: "images/entries/ammonia.png",
     rarity: 150,
     description: "A pungent nitrogen-hydrogen compound essential to fertilizer production and used as a refrigerant.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2542,7 +2552,7 @@ const defaultEntries = [
     image: "images/entries/scandium.png",
     rarity: 150,
     description: "A lightweight rare-earth metal used in aerospace alloys.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-28T00:00:00.000Z",
   },
   {
@@ -2552,7 +2562,7 @@ const defaultEntries = [
     image: "images/entries/molten-copper.png",
     rarity: 153,
     description: "Copper heated past its melting point of about 1085C into liquid metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -2562,7 +2572,7 @@ const defaultEntries = [
     image: "images/entries/disulfur-decafluoride.png",
     rarity: 153,
     description: "A highly toxic sulfur-fluorine gas, notable for its delayed and severe effect on the lungs.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -2572,7 +2582,7 @@ const defaultEntries = [
     image: "images/entries/caesium-137.png",
     rarity: 154,
     description: "A radioactive fission byproduct notorious for environmental contamination after nuclear accidents, but also used in medical and industrial gauges.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-22T00:00:00.000Z",
   },
   {
@@ -2582,7 +2592,7 @@ const defaultEntries = [
     image: "images/entries/strawberry-quartz.png",
     rarity: 155,
     description: "A quartz variety flecked with red inclusions of iron oxide or lepidocrocite, giving it a strawberry-like look.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-05T00:00:00.000Z",
   },
   {
@@ -2592,7 +2602,7 @@ const defaultEntries = [
     image: "images/entries/platinum-hexafluoride.png",
     rarity: 155,
     description: "A highly reactive, corrosive platinum compound, one of the strongest oxidizers known when first discovered.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-16T00:00:00.000Z",
   },
   {
@@ -2601,8 +2611,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/osmium-tetroxide.png",
     rarity: 156,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -2612,7 +2622,7 @@ const defaultEntries = [
     image: "images/entries/technetium-95m.png",
     rarity: 156,
     description: "A radioactive technetium isotope with a half-life of about two months, used mainly in research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -2621,8 +2631,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/samarium-cobalt-alloy.png",
     rarity: 157,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2632,7 +2642,7 @@ const defaultEntries = [
     image: "images/entries/cyclooctatetraene.png",
     rarity: 157,
     description: "A ring-shaped hydrocarbon whose non-flat, tub-shaped structure makes it a classic subject in organic chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -2642,7 +2652,7 @@ const defaultEntries = [
     image: "images/entries/vanadinite.png",
     rarity: 158,
     description: "A red-orange lead vanadate mineral prized by collectors for its vivid crystals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
@@ -2652,7 +2662,7 @@ const defaultEntries = [
     image: "images/entries/hydrochloric-acid.png",
     rarity: 160,
     description: "A strong, corrosive acid naturally present in the stomach and widely used industrially.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-18T00:00:00.000Z",
   },
   {
@@ -2662,7 +2672,7 @@ const defaultEntries = [
     image: "images/entries/technetium-96.png",
     rarity: 163,
     description: "A radioactive technetium isotope with a roughly four-day half-life.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-08T00:00:00.000Z",
   },
   {
@@ -2672,7 +2682,7 @@ const defaultEntries = [
     image: "images/entries/seaborgium-hexacarbonyl.png",
     rarity: 164,
     description: "A rare synthetic compound of seaborgium, one of the few heavy synthetic elements ever studied through actual chemical reactions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -2682,7 +2692,7 @@ const defaultEntries = [
     image: "images/entries/pyrolusite.png",
     rarity: 164,
     description: "A common manganese oxide mineral and the primary ore of manganese.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-15T00:00:00.000Z",
   },
   {
@@ -2692,7 +2702,7 @@ const defaultEntries = [
     image: null,
     rarity: 165,
     description: "A once-common refrigerant and aerosol propellant, phased out globally for damaging the ozone layer.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2702,7 +2712,7 @@ const defaultEntries = [
     image: null,
     rarity: 166,
     description: "The plastic commonly known as PET, widely used in bottles and synthetic fabric.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2712,7 +2722,7 @@ const defaultEntries = [
     image: "images/entries/roses-metal.png",
     rarity: 167,
     description: "A low-melting bismuth-lead-tin alloy that can melt in hot water, similar to Wood's metal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2722,7 +2732,7 @@ const defaultEntries = [
     image: null,
     rarity: 167,
     description: "An extremely potent opioid used in veterinary medicine to sedate large animals like elephants.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2732,7 +2742,7 @@ const defaultEntries = [
     image: "images/entries/pyrite.png",
     rarity: 168,
     description: "A brassy, metallic mineral nicknamed fool's gold for its resemblance to true gold.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-03T00:00:00.000Z",
   },
   {
@@ -2742,7 +2752,7 @@ const defaultEntries = [
     image: "images/entries/anthophyllite.png",
     rarity: 168,
     description: "An amphibole mineral whose fibrous form is one of the six recognized types of asbestos.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -2752,7 +2762,7 @@ const defaultEntries = [
     image: "images/entries/parietin.png",
     rarity: 168,
     description: "An orange pigment compound produced by certain lichens, giving them their distinctive color.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -2762,7 +2772,7 @@ const defaultEntries = [
     image: "images/entries/pyruvic-acid.png",
     rarity: 168,
     description: "A key organic acid produced during glucose metabolism, sitting at the crossroads of several metabolic pathways.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -2772,7 +2782,7 @@ const defaultEntries = [
     image: "images/entries/isoleucine.png",
     rarity: 168,
     description: "An essential branched-chain amino acid important for muscle metabolism.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -2782,7 +2792,7 @@ const defaultEntries = [
     image: null,
     rarity: 169,
     description: "A synthetic superheavy element made only in particle accelerators, existing for a fraction of a second.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2792,7 +2802,7 @@ const defaultEntries = [
     image: "images/entries/seaborgium.png",
     rarity: 169,
     description: "A synthetic superheavy element named after chemist Glenn Seaborg, existing only briefly in laboratories.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2802,7 +2812,7 @@ const defaultEntries = [
     image: "images/entries/polylactic-acid.png",
     rarity: 170,
     description: "A biodegradable plastic made from renewable resources like corn starch, used in eco-friendly packaging.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2812,7 +2822,7 @@ const defaultEntries = [
     image: "images/entries/melatonin-2.png",
     rarity: 170,
     description: "A hormone that regulates the sleep-wake cycle, released by the brain's pineal gland in response to darkness.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2821,8 +2831,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lucifer-yellow.png",
     rarity: 170,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -2832,7 +2842,7 @@ const defaultEntries = [
     image: "images/entries/cadmium.png",
     rarity: 170,
     description: "A soft, toxic heavy metal used in batteries and older pigments.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-20T00:00:00.000Z",
   },
   {
@@ -2842,7 +2852,7 @@ const defaultEntries = [
     image: "images/entries/tremolite.png",
     rarity: 173,
     description: "A calcium-magnesium silicate mineral, whose fibrous form is one of the six regulated types of asbestos.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -2852,7 +2862,7 @@ const defaultEntries = [
     image: "images/entries/threonine.png",
     rarity: 174,
     description: "An essential amino acid important for protein production and immune function.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -2862,7 +2872,7 @@ const defaultEntries = [
     image: "images/entries/bismuth-subsalicylate.png",
     rarity: 174,
     description: "The active ingredient in Pepto-Bismol, used to treat upset stomach and diarrhea.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-11T00:00:00.000Z",
   },
   {
@@ -2872,7 +2882,7 @@ const defaultEntries = [
     image: "images/entries/uranyl-formate.png",
     rarity: 174,
     description: "A uranium salt occasionally used as a heavy-atom stain in structural biology.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -2882,7 +2892,7 @@ const defaultEntries = [
     image: "images/entries/methylchloroisothiazolinone.png",
     rarity: 175,
     description: "A common preservative used in cosmetics and household products, known to cause skin sensitivity in some people.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -2892,7 +2902,7 @@ const defaultEntries = [
     image: "images/entries/hafnium.png",
     rarity: 175,
     description: "A dense, corrosion-resistant metal used in nuclear reactor control rods.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -2902,7 +2912,7 @@ const defaultEntries = [
     image: "images/entries/holmium.png",
     rarity: 175,
     description: "A rare-earth metal with the highest magnetic strength of any element.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -2912,7 +2922,7 @@ const defaultEntries = [
     image: "images/entries/vanadyl-sulfate.png",
     rarity: 175,
     description: "A blue vanadium compound sold as a dietary supplement, though its benefits are not well established.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-14T00:00:00.000Z",
   },
   {
@@ -2922,7 +2932,7 @@ const defaultEntries = [
     image: "images/entries/hydrazine.png",
     rarity: 175,
     description: "A reactive, toxic nitrogen-hydrogen compound used as a rocket propellant.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -2932,7 +2942,7 @@ const defaultEntries = [
     image: "images/entries/radon.png",
     rarity: 176,
     description: "A radioactive noble gas that can accumulate in basements as a health hazard.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-07T00:00:00.000Z",
   },
   {
@@ -2942,7 +2952,7 @@ const defaultEntries = [
     image: "images/entries/polonium-dichloride.png",
     rarity: 176,
     description: "An unstable compound of the highly radioactive element polonium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -2952,7 +2962,7 @@ const defaultEntries = [
     image: null,
     rarity: 176,
     description: "A purple variety of calcite colored by trace cobalt, rare among calcite specimens.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2962,7 +2972,7 @@ const defaultEntries = [
     image: "images/entries/sulphur-38.png",
     rarity: 178,
     description: "A short-lived radioactive isotope of sulfur used mainly in scientific research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2972,7 +2982,7 @@ const defaultEntries = [
     image: "images/entries/angelicin.png",
     rarity: 178,
     description: "A naturally occurring plant compound related to psoralen, studied for its biological activity.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -2982,7 +2992,7 @@ const defaultEntries = [
     image: "images/entries/cinnamaldehyde.png",
     rarity: 178,
     description: "The organic compound responsible for the characteristic flavor and smell of cinnamon.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-08-01T00:00:00.000Z",
   },
   {
@@ -2992,7 +3002,7 @@ const defaultEntries = [
     image: "images/entries/tantalum-180m.png",
     rarity: 180,
     description: "An extraordinarily rare, naturally occurring metastable isotope so long-lived it's never been observed to decay.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3002,7 +3012,7 @@ const defaultEntries = [
     image: "images/entries/thorium.png",
     rarity: 180,
     description: "A radioactive metal being explored as an alternative nuclear fuel.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-27T00:00:00.000Z",
   },
   {
@@ -3012,7 +3022,7 @@ const defaultEntries = [
     image: "images/entries/uranyl-nitrate.png",
     rarity: 180,
     description: "A soluble, fluorescent yellow uranium salt historically used in early photography and glass coloring.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-20T00:00:00.000Z",
   },
   {
@@ -3022,7 +3032,7 @@ const defaultEntries = [
     image: "images/entries/boron.png",
     rarity: 180,
     description: "A metalloid essential in trace amounts to plants, used industrially in glass and ceramics.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -3031,8 +3041,8 @@ const defaultEntries = [
     category: "Compound",
     image: null,
     rarity: 180,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3042,7 +3052,7 @@ const defaultEntries = [
     image: "images/entries/chitin.png",
     rarity: 180,
     description: "A tough, natural polymer that forms the exoskeletons of insects and crustaceans and the cell walls of fungi.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -3052,7 +3062,7 @@ const defaultEntries = [
     image: "images/entries/cornwallite.png",
     rarity: 182,
     description: "A green copper arsenate mineral related to olivenite, found in oxidized copper deposits.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3062,7 +3072,7 @@ const defaultEntries = [
     image: "images/entries/roentgenium.png",
     rarity: 183,
     description: "A synthetic superheavy element made in particle accelerators, existing for only a fraction of a second.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3072,7 +3082,7 @@ const defaultEntries = [
     image: "images/entries/arginine.png",
     rarity: 184,
     description: "A semi-essential amino acid involved in wound healing and blood vessel function.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -3082,7 +3092,7 @@ const defaultEntries = [
     image: "images/entries/shikimic-acid.png",
     rarity: 185,
     description: "A plant-derived acid extracted from star anise, used as the starting material for the antiviral drug Tamiflu.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-04T00:00:00.000Z",
   },
   {
@@ -3092,7 +3102,7 @@ const defaultEntries = [
     image: "images/entries/phosphine.png",
     rarity: 185,
     description: "A toxic, flammable gas used as a fumigant to protect stored grain from pests.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-12T00:00:00.000Z",
   },
   {
@@ -3102,7 +3112,7 @@ const defaultEntries = [
     image: "images/entries/paradichlorobenzene.png",
     rarity: 185,
     description: "A compound with a strong sweet smell used in mothballs and deodorizer blocks.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-25T00:00:00.000Z",
   },
   {
@@ -3112,7 +3122,7 @@ const defaultEntries = [
     image: "images/entries/goethite.png",
     rarity: 186,
     description: "A common iron oxide mineral and a major component of rust and many ochre pigments.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-06T00:00:00.000Z",
   },
   {
@@ -3121,8 +3131,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/beryllium-carbonate.png",
     rarity: 186,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-22T00:00:00.000Z",
   },
   {
@@ -3131,8 +3141,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/phenylcarbylamine-chloride.png",
     rarity: 186,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -3142,7 +3152,7 @@ const defaultEntries = [
     image: "images/entries/technetium-97m.png",
     rarity: 187,
     description: "A metastable radioactive isotope of technetium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-08T00:00:00.000Z",
   },
   {
@@ -3152,7 +3162,7 @@ const defaultEntries = [
     image: "images/entries/polyacetylene.png",
     rarity: 187,
     description: "A conductive organic polymer whose discovery led to a Nobel Prize for the field of conductive plastics.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-08-01T00:00:00.000Z",
   },
   {
@@ -3162,7 +3172,7 @@ const defaultEntries = [
     image: "images/entries/red-phosphorus.png",
     rarity: 188,
     description: "A stable, less reactive form of phosphorus used in match strikers and flame retardants.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3172,7 +3182,7 @@ const defaultEntries = [
     image: "images/entries/francium.png",
     rarity: 188,
     description: "One of the rarest and most unstable naturally occurring elements.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -3182,7 +3192,7 @@ const defaultEntries = [
     image: "images/entries/resorcinol.png",
     rarity: 188,
     description: "An organic compound used in skincare products, dyes, and the production of resins.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-20T00:00:00.000Z",
   },
   {
@@ -3192,7 +3202,7 @@ const defaultEntries = [
     image: "images/entries/leightonite.png",
     rarity: 189,
     description: "A rare pale blue sulfate mineral containing potassium, calcium, and copper, known from only a handful of localities.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-09-23T00:00:00.000Z",
   },
   {
@@ -3202,7 +3212,7 @@ const defaultEntries = [
     image: "images/entries/antimony-pentafluoride.png",
     rarity: 189,
     description: "One of the strongest Lewis acids known, used to make superacids like fluoroantimonic acid.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3211,8 +3221,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/arctite.png",
     rarity: 189,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -3222,7 +3232,7 @@ const defaultEntries = [
     image: "images/entries/actinium.png",
     rarity: 189,
     description: "A rare, highly radioactive element that glows faintly blue in the dark.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -3232,7 +3242,7 @@ const defaultEntries = [
     image: "images/entries/powellite.png",
     rarity: 192,
     description: "A yellow-brown calcium molybdate mineral, often fluorescing bright yellow under UV light.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3242,7 +3252,7 @@ const defaultEntries = [
     image: "images/entries/cotton.png",
     rarity: 193,
     description: "A soft natural fiber harvested from the cotton plant, spun into textiles.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-04T00:00:00.000Z",
   },
   {
@@ -3252,7 +3262,7 @@ const defaultEntries = [
     image: "images/entries/uranyl-peroxide.png",
     rarity: 194,
     description: "An intermediate compound formed during uranium ore processing.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3262,7 +3272,7 @@ const defaultEntries = [
     image: null,
     rarity: 194,
     description: "A reactive compound of uranium and hydrogen, of interest in nuclear fuel chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3271,8 +3281,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/arsenuranospathite.png",
     rarity: 194,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-29T00:00:00.000Z",
   },
   {
@@ -3282,7 +3292,7 @@ const defaultEntries = [
     image: "images/entries/perfluoroisobutene.png",
     rarity: 194,
     description: "An extremely toxic fluorinated gas, among the most hazardous industrial byproducts known.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-05T00:00:00.000Z",
   },
   {
@@ -3292,7 +3302,7 @@ const defaultEntries = [
     image: "images/entries/methionine.png",
     rarity: 194,
     description: "An essential sulfur-containing amino acid that starts nearly every protein chain.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -3302,7 +3312,7 @@ const defaultEntries = [
     image: "images/entries/orange-calcite.png",
     rarity: 196,
     description: "An orange-toned variety of calcite, colored by trace hematite inclusions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -3312,7 +3322,7 @@ const defaultEntries = [
     image: "images/entries/strontium-90.png",
     rarity: 197,
     description: "A radioactive strontium isotope produced by nuclear fission, notable for mimicking calcium in bone.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3322,7 +3332,7 @@ const defaultEntries = [
     image: null,
     rarity: 198,
     description: "A fundamental particle of light and all electromagnetic radiation.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3332,7 +3342,7 @@ const defaultEntries = [
     image: "images/entries/lockalloy.png",
     rarity: 198,
     description: "A lightweight beryllium-aluminum alloy developed for aerospace structures, valued for its stiffness-to-weight ratio.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-13T00:00:00.000Z",
   },
   {
@@ -3342,7 +3352,7 @@ const defaultEntries = [
     image: "images/entries/gold-198.png",
     rarity: 198,
     description: "A radioactive gold isotope used historically in medicine and industrial radiography.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -3352,7 +3362,7 @@ const defaultEntries = [
     image: "images/entries/ilmenite.png",
     rarity: 198,
     description: "A black iron-titanium oxide mineral and the primary ore of titanium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
@@ -3362,7 +3372,7 @@ const defaultEntries = [
     image: "images/entries/neptunium.png",
     rarity: 199,
     description: "A radioactive metal, the first transuranium element discovered.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -3372,7 +3382,7 @@ const defaultEntries = [
     image: "images/entries/testosterone.png",
     rarity: 200,
     description: "The primary male sex hormone, also present in smaller amounts in females.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3382,7 +3392,7 @@ const defaultEntries = [
     image: "images/entries/estrogen.png",
     rarity: 200,
     description: "A key group of female sex hormones regulating reproduction and development.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3392,7 +3402,7 @@ const defaultEntries = [
     image: "images/entries/hydrogen.png",
     rarity: 200,
     description: "The lightest and most abundant element in the universe.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-16T00:00:00.000Z",
   },
   {
@@ -3402,7 +3412,7 @@ const defaultEntries = [
     image: "images/entries/ibuprofen.png",
     rarity: 200,
     description: "A common over-the-counter anti-inflammatory pain reliever.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -3412,7 +3422,7 @@ const defaultEntries = [
     image: "images/entries/magnesioriebeckite.png",
     rarity: 200,
     description: "A magnesium-rich amphibole mineral closely related to riebeckite.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -3422,7 +3432,7 @@ const defaultEntries = [
     image: "images/entries/tungsten-carbide.png",
     rarity: 200,
     description: "An extremely hard compound of tungsten and carbon, used in cutting tools and rings.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-31T00:00:00.000Z",
   },
   {
@@ -3432,7 +3442,7 @@ const defaultEntries = [
     image: "images/entries/phenylalanine.png",
     rarity: 201,
     description: "An essential amino acid and precursor to tyrosine and several neurotransmitters.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -3442,7 +3452,7 @@ const defaultEntries = [
     image: "images/entries/enkephalin.png",
     rarity: 203,
     description: "A natural opioid peptide produced by the body to help regulate pain.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -3452,7 +3462,7 @@ const defaultEntries = [
     image: "images/entries/heptane.png",
     rarity: 203,
     description: "A flammable hydrocarbon used as a solvent and reference fuel for octane ratings.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -3462,7 +3472,7 @@ const defaultEntries = [
     image: "images/entries/buergerite.png",
     rarity: 203,
     description: "A rare iron-rich, black variety of tourmaline named after crystallographer Martin Buerger.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-22T00:00:00.000Z",
   },
   {
@@ -3472,7 +3482,7 @@ const defaultEntries = [
     image: "images/entries/ethane.png",
     rarity: 203,
     description: "A simple hydrocarbon gas and major component of natural gas.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-28T00:00:00.000Z",
   },
   {
@@ -3482,7 +3492,7 @@ const defaultEntries = [
     image: "images/entries/melanterite.png",
     rarity: 203,
     description: "A pale green iron sulfate mineral that forms from the weathering of pyrite.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -3492,7 +3502,7 @@ const defaultEntries = [
     image: "images/entries/gallium-arsenide.png",
     rarity: 203,
     description: "A semiconductor compound used in high-speed electronics and LEDs.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-08-01T00:00:00.000Z",
   },
   {
@@ -3502,7 +3512,7 @@ const defaultEntries = [
     image: "images/entries/alanine.png",
     rarity: 204,
     description: "A simple, non-essential amino acid involved in glucose metabolism.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -3512,7 +3522,7 @@ const defaultEntries = [
     image: "images/entries/technetium-103.png",
     rarity: 204,
     description: "A short-lived radioactive isotope of technetium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-08T00:00:00.000Z",
   },
   {
@@ -3522,7 +3532,7 @@ const defaultEntries = [
     image: "images/entries/yellow-calcite.png",
     rarity: 204,
     description: "A yellow variety of calcite colored by trace iron impurities.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-15T00:00:00.000Z",
   },
   {
@@ -3532,7 +3542,7 @@ const defaultEntries = [
     image: null,
     rarity: 206,
     description: "A reactive compound used in biochemistry to cleave proteins at specific points.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3542,7 +3552,7 @@ const defaultEntries = [
     image: "images/entries/iodic-acid.png",
     rarity: 206,
     description: "A strong oxidizing acid of iodine, used in analytical chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-07-19T00:00:00.000Z",
   },
   {
@@ -3552,7 +3562,7 @@ const defaultEntries = [
     image: "images/entries/stibiotantalite.png",
     rarity: 210,
     description: "A rare, brownish mineral containing antimony and tantalum, prized by collectors for its color-change properties.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3562,7 +3572,7 @@ const defaultEntries = [
     image: "images/entries/winchite.png",
     rarity: 210,
     description: "A blue-gray amphibole mineral, sometimes found intergrown with asbestos minerals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -3572,7 +3582,7 @@ const defaultEntries = [
     image: "images/entries/carboxyhemoglobin.png",
     rarity: 210,
     description: "The compound formed when carbon monoxide binds to hemoglobin, blocking the blood's ability to carry oxygen.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -3582,7 +3592,7 @@ const defaultEntries = [
     image: "images/entries/vomitoxin.png",
     rarity: 210,
     description: "A common name for deoxynivalenol, a mold toxin that contaminates cereal crops and causes nausea.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -3592,7 +3602,7 @@ const defaultEntries = [
     image: "images/entries/joaquinite-ce.png",
     rarity: 210,
     description: "A rare, honey-yellow mineral first described from California's coastal ranges.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -3602,7 +3612,7 @@ const defaultEntries = [
     image: "images/entries/yellowcake.png",
     rarity: 210,
     description: "A processed uranium concentrate powder, an intermediate step in nuclear fuel production.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-31T00:00:00.000Z",
   },
   {
@@ -3612,7 +3622,7 @@ const defaultEntries = [
     image: "images/entries/zhanghengite-2.png",
     rarity: 213,
     description: "A rare copper-zinc mineral named after the Chinese astronomer Zhang Heng.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3622,7 +3632,7 @@ const defaultEntries = [
     image: "images/entries/moronic-acid.png",
     rarity: 213,
     description: "A plant-derived triterpenoid acid studied for its biological activity, found in various resins and herbs.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -3632,7 +3642,7 @@ const defaultEntries = [
     image: "images/entries/lanthanum.png",
     rarity: 213,
     description: "A soft rare-earth metal used in camera lenses and catalytic converters.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-08-02T00:00:00.000Z",
   },
   {
@@ -3642,7 +3652,7 @@ const defaultEntries = [
     image: "images/entries/abswurmbachite.png",
     rarity: 214,
     description: "A rare manganese oxide mineral named after mineralogist Ingrid Abs-Wurmbach.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3651,8 +3661,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dinitrogen-pentoxide.png",
     rarity: 214,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3662,7 +3672,7 @@ const defaultEntries = [
     image: "images/entries/glutamine.png",
     rarity: 214,
     description: "The most abundant amino acid in the human body, important for immune function and gut health.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
   },
   {
@@ -3672,7 +3682,7 @@ const defaultEntries = [
     image: "images/entries/molten-aluminium.png",
     rarity: 215,
     description: "Aluminium heated past its melting point of about 660C into liquid metal, as used in casting and smelting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -3682,7 +3692,7 @@ const defaultEntries = [
     image: "images/entries/palmitic-acid.png",
     rarity: 215,
     description: "The most common saturated fatty acid in the human body and in many plant and animal fats.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-01T00:00:00.000Z",
   },
   {
@@ -3692,7 +3702,7 @@ const defaultEntries = [
     image: "images/entries/pentlandite.png",
     rarity: 216,
     description: "The primary ore mineral of nickel, typically found alongside pyrrhotite in igneous rocks.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-13T00:00:00.000Z",
   },
   {
@@ -3702,7 +3712,7 @@ const defaultEntries = [
     image: "images/entries/prussian-blue.png",
     rarity: 217,
     description: "One of the first synthetic pigments ever made, also used medically to treat certain types of heavy metal poisoning.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -3712,7 +3722,7 @@ const defaultEntries = [
     image: "images/entries/propyl-acetate.png",
     rarity: 218,
     description: "A fruity-smelling ester used as a solvent and flavoring agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -3722,7 +3732,7 @@ const defaultEntries = [
     image: "images/entries/yingjiangite.png",
     rarity: 220,
     description: "A rare, fluorescent yellow uranium-phosphate mineral first identified in Yunnan, China, closely related to phosphuranylite.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3732,7 +3742,7 @@ const defaultEntries = [
     image: "images/entries/terbium.png",
     rarity: 220,
     description: "A rare-earth metal used in green phosphors for displays and lighting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-05-16T00:00:00.000Z",
   },
   {
@@ -3742,7 +3752,7 @@ const defaultEntries = [
     image: "images/entries/technetium-101.png",
     rarity: 223,
     description: "A short-lived radioactive isotope of technetium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -3751,8 +3761,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/beryllium-hydride.png",
     rarity: 223,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3762,7 +3772,7 @@ const defaultEntries = [
     image: "images/entries/einsteinium.png",
     rarity: 223,
     description: "A synthetic radioactive element first discovered in the debris of a hydrogen bomb test.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -3772,7 +3782,7 @@ const defaultEntries = [
     image: "images/entries/lutetium.png",
     rarity: 223,
     description: "The densest and hardest of the rare-earth metals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -3782,7 +3792,7 @@ const defaultEntries = [
     image: "images/entries/californiumiii-fluoride.png",
     rarity: 225,
     description: "A compound of the intensely radioactive synthetic element californium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -3792,7 +3802,7 @@ const defaultEntries = [
     image: "images/entries/tellurium-129m.png",
     rarity: 226,
     description: "A metastable radioactive isotope of the metalloid tellurium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3802,7 +3812,7 @@ const defaultEntries = [
     image: "images/entries/seafoam-calcite.png",
     rarity: 226,
     description: "A pale green-blue variety of calcite named for its soft, sea-glass-like color.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -3812,7 +3822,7 @@ const defaultEntries = [
     image: "images/entries/bayldonite.png",
     rarity: 228,
     description: "A green, arsenate mineral that forms in the oxidized zones of copper-lead-arsenic deposits.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-29T00:00:00.000Z",
   },
   {
@@ -3822,7 +3832,7 @@ const defaultEntries = [
     image: "images/entries/sodium-sulfite.png",
     rarity: 285,
     description: "A preservative and antioxidant used in food, winemaking, and photographic processing.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3832,7 +3842,7 @@ const defaultEntries = [
     image: "images/entries/technetium-97.png",
     rarity: 286,
     description: "A long-lived radioactive isotope of technetium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -3842,7 +3852,7 @@ const defaultEntries = [
     image: "images/entries/smithsonite.png",
     rarity: 286,
     description: "A zinc carbonate mineral prized by collectors for its smooth, colorful botryoidal crystals.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -3851,8 +3861,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/brass.png",
     rarity: 287,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-24T00:00:00.000Z",
   },
   {
@@ -3862,17 +3872,17 @@ const defaultEntries = [
     image: "images/entries/sodium-hydroxide.png",
     rarity: 289,
     description: "A strongly caustic compound, commonly known as lye, used in soap-making and drain cleaners.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-29T00:00:00.000Z",
   },
   {
     id: "spawn-kermanite",
-    name: "\u00c5kermanite",
+    name: "Åkermanite",
     category: "Compound",
     image: "images/entries/kermanite.png",
     rarity: 290,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -3882,7 +3892,7 @@ const defaultEntries = [
     image: "images/entries/argon.png",
     rarity: 290,
     description: "An inert noble gas making up about 1% of Earth's atmosphere, used in welding and lighting.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3891,8 +3901,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/succinonitrile.png",
     rarity: 294,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -3902,7 +3912,7 @@ const defaultEntries = [
     image: "images/entries/carbon-dioxide-2.png",
     rarity: 295,
     description: "A colorless gas essential to photosynthesis and a major greenhouse gas.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3911,8 +3921,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/mangano-mangani-ungarettiite.png",
     rarity: 296,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3922,7 +3932,7 @@ const defaultEntries = [
     image: "images/entries/perbromic-acid.png",
     rarity: 296,
     description: "One of the strongest known oxidizing acids, difficult to prepare and rarely used outside research.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-11T00:00:00.000Z",
   },
   {
@@ -3932,7 +3942,7 @@ const defaultEntries = [
     image: "images/entries/methyl-isocyanate.png",
     rarity: 297,
     description: "A highly toxic industrial chemical, infamous for its role in the 1984 Bhopal disaster.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-07T00:00:00.000Z",
   },
   {
@@ -3942,7 +3952,7 @@ const defaultEntries = [
     image: "images/entries/cats-eye-quartz.png",
     rarity: 301,
     description: "A quartz variety showing a bright band of reflected light, resembling a cat's eye.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3952,7 +3962,7 @@ const defaultEntries = [
     image: "images/entries/levocetirizine.png",
     rarity: 302,
     description: "A non-drowsy antihistamine used to relieve allergy symptoms.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-02T00:00:00.000Z",
   },
   {
@@ -3962,7 +3972,7 @@ const defaultEntries = [
     image: "images/entries/pseudoephedrine.png",
     rarity: 302,
     description: "A decongestant medication also used as a precursor in illicit methamphetamine production, which restricts its sale in many countries.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-14T00:00:00.000Z",
   },
   {
@@ -3971,8 +3981,8 @@ const defaultEntries = [
     category: "Compound",
     image: null,
     rarity: 303,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3982,7 +3992,7 @@ const defaultEntries = [
     image: "images/entries/potch-opal.png",
     rarity: 304,
     description: "A common form of opal that lacks the colorful play-of-color seen in precious opal.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -3991,8 +4001,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/trichloromethane-sulfenyl-chloride.png",
     rarity: 304,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -4002,7 +4012,7 @@ const defaultEntries = [
     image: "images/entries/5-hydroxyindoleacetic-acid.png",
     rarity: 305,
     description: "A breakdown product of serotonin, measured in medical tests to assess serotonin levels.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -4011,8 +4021,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/actinolite.png",
     rarity: 306,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4022,7 +4032,7 @@ const defaultEntries = [
     image: "images/entries/cyclopentadienyltungsten-tricarbonyl-dimer.png",
     rarity: 306,
     description: "An organometallic tungsten compound used as a catalyst and research reagent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4032,7 +4042,7 @@ const defaultEntries = [
     image: "images/entries/technetium-104.png",
     rarity: 306,
     description: "A short-lived radioactive isotope of technetium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4041,8 +4051,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/direct-reduced-iron.png",
     rarity: 306,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -4052,7 +4062,7 @@ const defaultEntries = [
     image: "images/entries/ethyl-acetate.png",
     rarity: 306,
     description: "A sweet-smelling solvent used in nail polish remover and as a decaffeination agent.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-27T00:00:00.000Z",
   },
   {
@@ -4061,8 +4071,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/jalpaite.png",
     rarity: 306,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -4072,7 +4082,7 @@ const defaultEntries = [
     image: "images/entries/iodopropynyl-butylcarbamate.png",
     rarity: 307,
     description: "A preservative used in cosmetics and personal care products to prevent microbial growth.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4082,7 +4092,7 @@ const defaultEntries = [
     image: "images/entries/propanal.png",
     rarity: 307,
     description: "A simple, flammable aldehyde with a sharp odor, used in the production of plastics and solvents.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-17T00:00:00.000Z",
   },
   {
@@ -4092,7 +4102,7 @@ const defaultEntries = [
     image: "images/entries/polonium-dibromide.png",
     rarity: 308,
     description: "A rarely isolated compound of radioactive polonium.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
@@ -4102,7 +4112,7 @@ const defaultEntries = [
     image: "images/entries/bauxite.png",
     rarity: 310,
     description: "The primary ore of aluminum, a reddish-brown sedimentary rock.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4111,8 +4121,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cadmoindite.png",
     rarity: 312,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -4122,7 +4132,7 @@ const defaultEntries = [
     image: "images/entries/allicin.png",
     rarity: 312,
     description: "The pungent compound responsible for garlic's distinctive smell and flavor.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-04-26T00:00:00.000Z",
   },
   {
@@ -4132,7 +4142,7 @@ const defaultEntries = [
     image: "images/entries/salt.png",
     rarity: 316,
     description: "Sodium chloride, an essential mineral for life and one of the oldest food seasonings.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -4141,8 +4151,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potassium-octacyanomolybdateiv.png",
     rarity: 316,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-29T00:00:00.000Z",
   },
   {
@@ -4152,7 +4162,7 @@ const defaultEntries = [
     image: "images/entries/mangano-calcite.png",
     rarity: 316,
     description: "A soft pink variety of calcite colored by trace manganese.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -4162,7 +4172,7 @@ const defaultEntries = [
     image: "images/entries/sodium-perborate-tetrahydrate.png",
     rarity: 318,
     description: "A mild bleaching and disinfecting compound used in laundry detergents and denture cleaners.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4172,7 +4182,7 @@ const defaultEntries = [
     image: "images/entries/cyanamide.png",
     rarity: 318,
     description: "A nitrogen-carbon compound used in fertilizers and as a chemical intermediate.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -4181,8 +4191,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potassic-magnesio-fluoro-arfvedsonite.png",
     rarity: 320,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4192,7 +4202,7 @@ const defaultEntries = [
     image: "images/entries/methadone-intermediate.png",
     rarity: 321,
     description: "An intermediate chemical step in the industrial synthesis of the opioid medication methadone.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4202,7 +4212,7 @@ const defaultEntries = [
     image: "images/entries/vanadyl-acetylacetonate.png",
     rarity: 324,
     description: "A vanadium coordination compound used as a catalyst in organic chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-14T00:00:00.000Z",
   },
   {
@@ -4211,8 +4221,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/anhydrous-potassium-aluminate.png",
     rarity: 325,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-08T00:00:00.000Z",
   },
   {
@@ -4222,7 +4232,7 @@ const defaultEntries = [
     image: "images/entries/pyridinium-chlorochromate.png",
     rarity: 328,
     description: "A widely used laboratory reagent for oxidizing alcohols in organic chemistry.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-12T00:00:00.000Z",
   },
   {
@@ -4232,17 +4242,17 @@ const defaultEntries = [
     image: "images/entries/8-anilinonaphthalene-1-sulfonic-acid.png",
     rarity: 330,
     description: "A fluorescent dye used in biochemistry to study protein folding and structure.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
     id: "spawn-tr-gerite",
-    name: "Tr\u00f6gerite",
+    name: "Trögerite",
     category: "Compound",
     image: "images/entries/tr-gerite.png",
     rarity: 333,
     description: "A rare uranium-arsenate mineral, radioactive and fluorescent under UV light.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -4252,7 +4262,7 @@ const defaultEntries = [
     image: null,
     rarity: 336,
     description: "A dark variety of calcite, its color usually caused by trace carbon or manganese oxide inclusions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -4262,7 +4272,7 @@ const defaultEntries = [
     image: "images/entries/macedonite.png",
     rarity: 337,
     description: "An extremely rare lead titanate mineral first described in North Macedonia.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-01-29T00:00:00.000Z",
   },
   {
@@ -4272,7 +4282,7 @@ const defaultEntries = [
     image: "images/entries/red-calcite.png",
     rarity: 356,
     description: "A red-toned variety of calcite colored by iron oxide inclusions.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -4282,7 +4292,7 @@ const defaultEntries = [
     image: "images/entries/cyclooctadiene-rhodium-chloride-dimer.png",
     rarity: 378,
     description: "A rhodium organometallic compound widely used as a catalyst in chemical synthesis.",
-    addedBy: "atlas",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4291,8 +4301,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/acetic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-27T00:00:00.000Z",
   },
   {
@@ -4301,8 +4311,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/acetonitrile.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -4311,8 +4321,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/acetylenedicarboxylic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-13T00:00:00.000Z",
   },
   {
@@ -4321,8 +4331,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/acrolein.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -4331,8 +4341,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/adipic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-06T00:00:00.000Z",
   },
   {
@@ -4341,8 +4351,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/agra-diamond.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -4351,8 +4361,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/ajosite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-04T00:00:00.000Z",
   },
   {
@@ -4361,8 +4371,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/alum.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-01T00:00:00.000Z",
   },
   {
@@ -4371,8 +4381,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/amosite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4381,8 +4391,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/andamooka-opal.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-16T00:00:00.000Z",
   },
   {
@@ -4391,8 +4401,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/athabascaite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4401,8 +4411,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/athabascaite-spawn-1b1afph.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4411,8 +4421,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/auerlite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-09-23T00:00:00.000Z",
   },
   {
@@ -4421,8 +4431,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/benzonitrile.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -4431,8 +4441,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/birthday-water.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-05-23T00:00:00.000Z",
   },
   {
@@ -4441,8 +4451,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/birthday-water-spawn-tk1ziox.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-05-23T00:00:00.000Z",
   },
   {
@@ -4451,8 +4461,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/black-opal-spawn-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-08-22T00:00:00.000Z",
   },
   {
@@ -4461,8 +4471,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/blue-asbestos.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-02T00:00:00.000Z",
   },
   {
@@ -4471,8 +4481,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bombykol.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4481,8 +4491,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bowtiediene.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -4491,8 +4501,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bowtiediene-spawn-jwufysq.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -4501,8 +4511,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/brass-spawn-y9n9uvq.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-15T00:00:00.000Z",
   },
   {
@@ -4511,8 +4521,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bystrite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4521,8 +4531,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cacoxenite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-26T00:00:00.000Z",
   },
   {
@@ -4531,8 +4541,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/calcium-bisulfite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-06-13T00:00:00.000Z",
   },
   {
@@ -4541,8 +4551,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/calcium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-16T00:00:00.000Z",
   },
   {
@@ -4551,8 +4561,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/carotene.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -4561,8 +4571,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/caryopilite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-01T00:00:00.000Z",
   },
   {
@@ -4571,8 +4581,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/chlorine-dioxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-17T00:00:00.000Z",
   },
   {
@@ -4581,8 +4591,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/chlorofluorocarbons.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-02T00:00:00.000Z",
   },
   {
@@ -4591,8 +4601,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/chloromethylene.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-06-15T00:00:00.000Z",
   },
   {
@@ -4601,8 +4611,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cobalt-60.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -4611,8 +4621,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cobaltiii-oxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-25T00:00:00.000Z",
   },
   {
@@ -4621,8 +4631,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cobaltocene.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4631,8 +4641,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/copernicium-vapour.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-02T00:00:00.000Z",
   },
   {
@@ -4641,8 +4651,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/copper.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -4651,8 +4661,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/crocoite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -4661,8 +4671,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cyanide-new.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-09-13T00:00:00.000Z",
   },
   {
@@ -4671,8 +4681,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cyanogen-bromine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-07T00:00:00.000Z",
   },
   {
@@ -4681,8 +4691,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cyclononane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4691,8 +4701,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dianisidine-chlorosulfate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-05T00:00:00.000Z",
   },
   {
@@ -4701,8 +4711,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dicopper-chloride-trihydroxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -4711,8 +4721,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dubnium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -4721,29 +4731,9 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dysprosium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-14T00:00:00.000Z",
-  },
-  {
-    id: "spawn-ecstacy",
-    name: "Ecstacy",
-    category: "Compound",
-    image: "images/entries/ecstacy.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-10-27T00:00:00.000Z",
-  },
-  {
-    id: "spawn-electric-neon-spawn-revamp",
-    name: "Electric Neon Spawn Revamp",
-    category: "Compound",
-    image: "images/entries/electric-neon-spawn-revamp.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
     id: "spawn-estrogen-spawn-revamp",
@@ -4751,8 +4741,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/estrogen-spawn-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -4761,8 +4751,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/etophine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-04T00:00:00.000Z",
   },
   {
@@ -4771,8 +4761,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/fayalite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-07T00:00:00.000Z",
   },
   {
@@ -4781,8 +4771,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/flevorium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-17T00:00:00.000Z",
   },
   {
@@ -4791,8 +4781,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/fluorescein.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-26T00:00:00.000Z",
   },
   {
@@ -4801,8 +4791,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/fluoroacetic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -4811,8 +4801,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/fraipontite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
@@ -4821,8 +4811,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/galactose.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -4831,8 +4821,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/germanite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-12T00:00:00.000Z",
   },
   {
@@ -4841,8 +4831,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/glauconite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-05-09T00:00:00.000Z",
   },
   {
@@ -4851,8 +4841,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/glaucophane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4861,8 +4851,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/glyceraldehyde-3-phosphate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-01T00:00:00.000Z",
   },
   {
@@ -4871,8 +4861,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/grelin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-09-27T00:00:00.000Z",
   },
   {
@@ -4881,8 +4871,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/grunerite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-03T00:00:00.000Z",
   },
   {
@@ -4891,8 +4881,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/helium-hydride-ion.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -4901,8 +4891,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/hematoconite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -4911,8 +4901,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/hydroastatic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-06T00:00:00.000Z",
   },
   {
@@ -4921,8 +4911,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/iron-ii-bromide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -4931,8 +4921,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/jadeite-spawn-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -4941,8 +4931,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/kazakhstanite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-29T00:00:00.000Z",
   },
   {
@@ -4951,8 +4941,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/kieserite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -4961,8 +4951,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lithium-hypofluorite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-16T00:00:00.000Z",
   },
   {
@@ -4971,8 +4961,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lithium-lactate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-08T00:00:00.000Z",
   },
   {
@@ -4981,8 +4971,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/luzonite-spawn-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-04T00:00:00.000Z",
   },
   {
@@ -4991,19 +4981,9 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lycine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-06-14T00:00:00.000Z",
-  },
-  {
-    id: "spawn-meth",
-    name: "Meth",
-    category: "Compound",
-    image: "images/entries/meth.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-09-03T00:00:00.000Z",
   },
   {
     id: "spawn-methane",
@@ -5011,8 +4991,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/methane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-28T00:00:00.000Z",
   },
   {
@@ -5021,8 +5001,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/methyl-propionate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-26T00:00:00.000Z",
   },
   {
@@ -5031,8 +5011,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/methylmalonic-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-08T00:00:00.000Z",
   },
   {
@@ -5041,8 +5021,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/molten-bismuth.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-10T00:00:00.000Z",
   },
   {
@@ -5051,8 +5031,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/molten-lead.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-28T00:00:00.000Z",
   },
   {
@@ -5061,8 +5041,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/molten-tin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -5071,8 +5051,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/molten-zinc.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-09T00:00:00.000Z",
   },
   {
@@ -5081,8 +5061,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/monosodium-glutamate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-13T00:00:00.000Z",
   },
   {
@@ -5091,8 +5071,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/mother-of-satan.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-16T00:00:00.000Z",
   },
   {
@@ -5101,8 +5081,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/myoglobin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-09-18T00:00:00.000Z",
   },
   {
@@ -5111,8 +5091,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/nihonium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -5121,8 +5101,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/niobium-disulfide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-08T00:00:00.000Z",
   },
   {
@@ -5131,8 +5111,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/nitric-oxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -5141,8 +5121,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/oganesson.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-06T00:00:00.000Z",
   },
   {
@@ -5151,8 +5131,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/opal-spawn-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-08-22T00:00:00.000Z",
   },
   {
@@ -5161,8 +5141,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/perchloryl-fluoride.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-06T00:00:00.000Z",
   },
   {
@@ -5171,8 +5151,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/pet.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-26T00:00:00.000Z",
   },
   {
@@ -5181,8 +5161,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/phthalimide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -5191,8 +5171,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/anhydrous-poloniumiv-sulfate-spawn-with-bg.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-08T00:00:00.000Z",
   },
   {
@@ -5201,19 +5181,9 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/jadeite-spawn-revamp-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-28T00:00:00.000Z",
-  },
-  {
-    id: "spawn-polane-spawn-with-bg",
-    name: "Polane spawn with bg",
-    category: "Compound",
-    image: "images/entries/polane-spawn-with-bg.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2026-01-08T00:00:00.000Z",
   },
   {
     id: "spawn-piperidine",
@@ -5221,8 +5191,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/piperidine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-22T00:00:00.000Z",
   },
   {
@@ -5231,8 +5201,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/plumbum.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-01T00:00:00.000Z",
   },
   {
@@ -5241,8 +5211,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potassium-hexafluorocuprateiii.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-28T00:00:00.000Z",
   },
   {
@@ -5251,8 +5221,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potassium-nonahydridorhenate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-12T00:00:00.000Z",
   },
   {
@@ -5261,19 +5231,9 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potassium-oxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-25T00:00:00.000Z",
-  },
-  {
-    id: "spawn-potassium-pyrosulfate",
-    name: "Potassium Pyrosulfate",
-    category: "Compound",
-    image: "images/entries/potassium-pyrosulfate.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-10-08T00:00:00.000Z",
   },
   {
     id: "spawn-potch-opal-spawn-art",
@@ -5281,8 +5241,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/potch-opal-spawn-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-08-22T00:00:00.000Z",
   },
   {
@@ -5291,8 +5251,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/progesterone.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-07-25T00:00:00.000Z",
   },
   {
@@ -5301,8 +5261,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/radium-223.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-01T00:00:00.000Z",
   },
   {
@@ -5311,8 +5271,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/richterite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-02T00:00:00.000Z",
   },
   {
@@ -5321,8 +5281,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/saccharine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -5331,8 +5291,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/salt-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-08T00:00:00.000Z",
   },
   {
@@ -5341,18 +5301,18 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/selenophene.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-21T00:00:00.000Z",
   },
   {
     id: "spawn-shakud",
-    name: "Shakud\u014d",
+    name: "Shakudō",
     category: "Compound",
     image: "images/entries/shakud.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-25T00:00:00.000Z",
   },
   {
@@ -5361,8 +5321,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/shamanite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-02-15T00:00:00.000Z",
   },
   {
@@ -5371,8 +5331,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/skimmianine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-20T00:00:00.000Z",
   },
   {
@@ -5381,8 +5341,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/skopolamin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-04T00:00:00.000Z",
   },
   {
@@ -5391,8 +5351,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/strontium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-16T00:00:00.000Z",
   },
   {
@@ -5401,8 +5361,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/strychnine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-01T00:00:00.000Z",
   },
   {
@@ -5411,8 +5371,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/succinimide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-14T00:00:00.000Z",
   },
   {
@@ -5421,18 +5381,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/sulfur-38-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-12-06T00:00:00.000Z",
-  },
-  {
-    id: "spawn-sulfur-revamp",
-    name: "Sulfur Revamp",
-    category: "Compound",
-    image: "images/entries/sulfur-revamp.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -5441,8 +5391,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/technetium-102.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -5451,8 +5401,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/technetium-98.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-07T00:00:00.000Z",
   },
   {
@@ -5461,8 +5411,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/technetium-98-spawn-revamp.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-21T00:00:00.000Z",
   },
   {
@@ -5471,8 +5421,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/tetraiodine-nonoxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-12-06T00:00:00.000Z",
   },
   {
@@ -5481,8 +5431,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/tetrakis1-norbornylcobaltiv.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-21T00:00:00.000Z",
   },
   {
@@ -5491,8 +5441,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/thallane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-27T00:00:00.000Z",
   },
   {
@@ -5501,8 +5451,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/tin-spawn-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-10-09T00:00:00.000Z",
   },
   {
@@ -5511,8 +5461,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/triazane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-03-22T00:00:00.000Z",
   },
   {
@@ -5521,8 +5471,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/trifluoronitrosomethane.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-04-05T00:00:00.000Z",
   },
   {
@@ -5531,8 +5481,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/white-asbestos.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-11-08T00:00:00.000Z",
   },
   {
@@ -5541,8 +5491,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/wolframite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-08-20T00:00:00.000Z",
   },
   {
@@ -5551,8 +5501,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/yttrium-nitrate-hexahydrate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-12T00:00:00.000Z",
   },
   {
@@ -5561,8 +5511,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/yttrium-nitrate-hexahydrate-spawn-b7jci3n.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2026-01-13T00:00:00.000Z",
   },
   {
@@ -5571,8 +5521,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/1754822990579.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5581,8 +5531,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/1766207643560.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5591,8 +5541,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/angelic-acid-ib0eoyi.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5601,8 +5551,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/argentobaumhauerite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5611,8 +5561,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/astatobenzene-emoji.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5621,8 +5571,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bowtiediene-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5631,8 +5581,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bowtiediene-uvwgmrd.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5641,8 +5591,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bronze-ae7hdlk.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5651,8 +5601,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cadaverine-5zsagvf.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5661,8 +5611,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/liquid-nitrogen-zk7ay5y.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5671,8 +5621,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/silver-ibjiwpy.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5681,8 +5631,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bismutite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5691,8 +5641,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/botulinum.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5701,8 +5651,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/boulder-opal.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5711,8 +5661,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/bronze-chemistrydex-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5721,18 +5671,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cadmium-oxide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-01-01T00:00:00.000Z",
-  },
-  {
-    id: "bare-chemistryballs-5",
-    name: "Chemistryballs 5",
-    category: "Compound",
-    image: "images/entries/chemistryballs-5.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5741,8 +5681,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/chevron-ametyst.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5751,8 +5691,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/chironex.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5761,8 +5701,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-cadaverine.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5771,8 +5711,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-capsaicin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5781,8 +5721,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-chlorophyll.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5791,8 +5731,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-liquid-nitrogen.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5801,8 +5741,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-milky-quartz.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5811,8 +5751,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-opal.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5821,8 +5761,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/christmas-pyrite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5831,8 +5771,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/citric-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5841,8 +5781,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/electric-argon-20250911160821.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5851,8 +5791,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/electric-xenon.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5861,8 +5801,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/electric-xenon-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5871,8 +5811,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/featured-image-myoglobin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5881,8 +5821,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/img-4943.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5891,8 +5831,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/invar.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5901,8 +5841,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lanthalum-hexaborate.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5911,8 +5851,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/lead-ii-iodide-dfupfah.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5921,8 +5861,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/liquid-nitrogen-txz430d.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5931,8 +5871,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/luzonite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5941,8 +5881,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/new-piskel-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5951,8 +5891,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/new-piskel-5.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5961,8 +5901,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/oxygen.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5971,8 +5911,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/oxygen-revamp-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5981,8 +5921,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/palmitic-acid-pxiel.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -5991,8 +5931,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/paraffin-wax.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6001,8 +5941,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/perchloric-acid.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6011,8 +5951,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/pg5-20250913071914.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6021,8 +5961,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/184-20260201085113.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6031,8 +5971,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/cortisol.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6041,8 +5981,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/hydrated-poloniumiv-sulfate-with-bg.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6051,8 +5991,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/screenshot-2025-08-26-165111.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6061,8 +6001,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/untitled891-20250909145229.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6071,8 +6011,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/xenon-revamp-with-background.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6081,8 +6021,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/pinetools-zx7unt0-com-screenshot-2025-08-26-165111.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6091,8 +6031,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/pipe-opal.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6101,8 +6041,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/powllite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6111,8 +6051,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/qingjiangite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6121,8 +6061,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/schorl.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6131,8 +6071,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/screenshot-2025-08-14-182554-photoroom.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6141,8 +6081,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/spooky-radon.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6151,8 +6091,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/titanium-nitride.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6161,18 +6101,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/tnt.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
-    dateAdded: "2025-01-01T00:00:00.000Z",
-  },
-  {
-    id: "bare-untitled114-20250927190015-web",
-    name: "Untitled114 20250927190015.web",
-    category: "Compound",
-    image: "images/entries/untitled114-20250927190015-web.png",
-    rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6181,8 +6111,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/untitled176.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6191,8 +6121,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/uranium-hydride.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6201,8 +6131,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/uranium-hydride-lo9bxgs.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6211,8 +6141,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/vx.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6221,8 +6151,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/water.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6231,8 +6161,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/water-revamp-art.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6241,8 +6171,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/wax.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6251,8 +6181,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/capitalist.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6261,8 +6191,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/catapleiite.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6271,8 +6201,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/citric-acid-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6281,8 +6211,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/communist.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6291,8 +6221,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/darmastadtium.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6301,8 +6231,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/democracy.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6311,8 +6241,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/dictatorship.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6321,8 +6251,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/french-india.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6331,8 +6261,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/image-photoroom-2.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6341,8 +6271,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/jadeite-20250910203941.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6351,8 +6281,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/maxixe.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6361,8 +6291,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/path7.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6371,8 +6301,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/pathpotassium-iodide.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6381,8 +6311,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/penicialin.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6391,8 +6321,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/shiny.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -6401,7 +6331,8 @@ const defaultEntries = [
     category: "Compound",
     image: "images/entries/union.png",
     rarity: null,
-    description: "Description not written yet \u2014 edit this entry's text in js/data.js.",
-    addedBy: "atlas",
+    description: "Description not written yet — edit this entry's text in js/data.js.",
+    addedBy: "Compendium",
     dateAdded: "2025-01-01T00:00:00.000Z",
-  },];
+  },
+];
